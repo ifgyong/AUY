@@ -13,7 +13,7 @@ protocol FYOpenDragFileProtocol : NSObjectProtocol {
 	func fileDragEnd()
 }
 
-class FYOpenDragFileView: NSView {
+class FYOpenDragFileView: NSImageView {
 	var isDraging:Bool = false;
 	weak var delegate : FYOpenDragFileProtocol?
 	
@@ -55,55 +55,65 @@ class FYOpenDragFileView: NSView {
 	override func draggingEnded(_ sender: NSDraggingInfo) {
 		print("松手了")
 		setupWithActive(active: false)
+//        if isDraging {
+//            upload(sender: sender)
+//        }
 	}
 	// 进入当前view
 	override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
 		isDraging = true
 		setupWithActive(active: true)
-//		let mask = sender.draggingSourceOperationMask
-//		let cp = sender.draggingFormation
+//        let op = NSDragOperation.copy
 		
-		
-		return .copy
+        return [.copy]
 	}
 	// 拖动结束
 	override func draggingExited(_ sender: NSDraggingInfo?) {
 		isDraging = false
 		setupWithActive(active: false)
 		print("draggingExited 进去又出来")
+
 	}
 	override func updateDraggingItemsForDrag(_ sender: NSDraggingInfo?) {
 		guard let next = delegate else {
 			return;
 		}
 		next.fileDraging()
+
 		print("更新拖动文件")
 	}
 	override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-		
-		guard let items = sender.draggingPasteboard.pasteboardItems else{
-			return false
-		}
-		var datas = [Data]()
-		for i in 0..<items.count{
-			
-			
-			let item = items[i] .string(forType: .fileURL)
-//			if item.types.contains([NSPasteboard.PasteboardType.fileURL]) {
-//			}
-			if item != nil {
-                let url = URL(string: item!)!
-                let da = try? Data(contentsOf : url)
-				guard let next = da else {
-					continue
-				}
-				datas.append(next)
-			}
-		}
-		QiniuUploadManger.uploadImage(nil, data: datas)
+		print("稍后复制data to app")
+//        let pasted = sender.draggingPasteboard
+        upload(sender: sender);
 		return true
 	}
-	
+    // MARK: clean up data
+    override func concludeDragOperation(_ sender: NSDraggingInfo?) {
+        if sender != nil{
+//            upload(sender: sender!)
+        }
+    }
+    func upload(sender:NSDraggingInfo? ) -> Void{
+        guard let sender2 = sender else {
+            return;
+        }
+        guard let items = sender2.draggingPasteboard.propertyList(forType: .fileURL) else{
+                    return
+                }
+        var datas = [Data]()
+        let itemArr =  items as? String
+        guard let itemNext = itemArr else {
+            return
+        }
+        let url = URL(string: itemNext)!
+        let data = try? Data(contentsOf : url)
+        guard let next = data else {
+            return
+        }
+        datas.append(next)
+		QiniuUploadManger.uploadImage(nil, data: datas)
+    }
 	
 	
 }

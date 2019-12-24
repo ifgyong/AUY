@@ -13,6 +13,7 @@
 #import "FYReceivedMsgObj.h"
 #import "UtilTool.h"
 #import "QiniuUploadManger.h"
+#import "FYDragView.h"
 
 
 
