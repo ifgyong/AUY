@@ -3,3 +3,4 @@ AUY.xcworkspace/
 *.xcworkspace/*
 .DBStore/*
 ._*.*
+**/_*.swift
