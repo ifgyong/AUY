@@ -1,3 +1,5 @@
+AUY.xcworkspace/*
 **/*.xcuserstate
 *.xcworkspace/*
 .DBStore/*
+._*.*
