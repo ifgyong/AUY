@@ -38,6 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		let _ = NSEvent.addGlobalMonitorForEvents(matching: .leftMouseDragged) { (ev) in
 			if self.keyBoard == nil{
 				let pb = NSPasteboard.init(name: .drag)
+				//添加 出现faild box error
 //				let numsDic = pb.propertyList(forType: .fileURL)
 
 				if  self.changeCount != pb.changeCount{
@@ -46,7 +47,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 				}
 				self.keyBoard = pb
 			}else{
-//				let numsDic = self.keyBoard!.propertyList(forType: .fileURL)
 				if  self.changeCount != self.keyBoard!.changeCount{
 					self.changeCount = self.keyBoard!.changeCount
 						self.showPopVC()
@@ -54,11 +54,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			}
             
 		}
-		
-//		let _ = NSEvent.addLocalMonitorForEvents(matching: .leftMouseDragged) { (ev) -> NSEvent? in
-//			print("local monitor")
-//			return ev
-//		};
 		let _ = NSEvent.addGlobalMonitorForEvents(matching: .leftMouseUp) { (ev) in
 			self.closePopVC()
 		}
@@ -72,10 +67,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //			let wind = NSWindow(contentViewController: vc)
 //			wind.styleMask = [.closable]
 //			let winVC = NSWindowController(window: wind)
-			
+//
 //			self.dragViewC = winVC;
+			
 			popover?.contentViewController = vc
-			self.popover?.behavior = .transient
+			self.popover?.behavior = .semitransient
+			self.popover?.animates = true
 			self.popover?.delegate = self
 		}
 	}
@@ -89,7 +86,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func showPopVC(){
 //		self.popIsShow  = true
 //		self.dragViewC!.showWindow(nil)
-//		
+//
 //		return;
 		
 		guard let vc = viewFromPop else {

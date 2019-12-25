@@ -20,7 +20,6 @@ class FYDragVC: NSViewController {
 		} else {
 			// Fallback on earlier versions
 			view.layer?.backgroundColor = CGColor(red: 0.5, green: 1, blue: 1, alpha: 1);
-
 		};
 		view2.frame = NSRect(x: 0, y: 0, width: 200, height: 200)
 	
