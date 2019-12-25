@@ -28,7 +28,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ow7-of-4hg">
-                    <rect key="frame" x="145" y="163" width="110" height="26"/>
+                    <rect key="frame" x="144" y="163" width="113" height="26"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Version 1.0" id="vk8-gX-Aaf">
                         <font key="font" metaFont="system" size="22"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,8 +43,23 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="95R-nB-m22">
+                    <rect key="frame" x="149" y="40" width="102" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WTU-GB-oTz"/>
+                        <constraint firstAttribute="width" constant="100" id="zg2-dB-QNt"/>
+                    </constraints>
+                    <buttonCell key="cell" type="squareTextured" title="使用帮助" bezelStyle="texturedSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aNz-UQ-ybb">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openURL:" target="-2" id="4mB-JK-ucG"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="95R-nB-m22" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="55I-fI-g3d"/>
                 <constraint firstItem="0Gd-aO-ISg" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="9PK-Sv-gaW"/>
                 <constraint firstItem="ow7-of-4hg" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="AHU-fi-3rX"/>
                 <constraint firstItem="ow7-of-4hg" firstAttribute="top" secondItem="jE5-P2-BoD" secondAttribute="bottom" constant="2" id="FAn-T8-yaI"/>
@@ -53,6 +68,7 @@
                 <constraint firstItem="jE5-P2-BoD" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="162" id="dhK-pn-Bcp"/>
                 <constraint firstAttribute="trailing" secondItem="0Gd-aO-ISg" secondAttribute="trailing" id="doO-2d-Ima"/>
                 <constraint firstAttribute="trailing" secondItem="jE5-P2-BoD" secondAttribute="trailing" constant="161" id="eiw-bH-Sa0"/>
+                <constraint firstItem="0Gd-aO-ISg" firstAttribute="top" secondItem="95R-nB-m22" secondAttribute="bottom" constant="8" id="o26-IO-LYx"/>
             </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </customView>

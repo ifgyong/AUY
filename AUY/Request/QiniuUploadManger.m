@@ -127,7 +127,8 @@ static NSString *extracted(NSData *finData) {
 													 buck:model.buckName];
 					complate(token);
 }
-+ (void)uploadImage:(NSArray<NSString*>  * _Nullable)urls data:(NSArray<NSData*>  * _Nullable )datas{
++ (void)uploadImage:(NSArray<NSString*>  * _Nullable)urls
+               data:(NSArray<NSData*>  * _Nullable )datas{
 	if ([QiniuUploadManger hasInfo] == NO) {
 		[[FYNotification share] pushErrorWithMsg:@"请先设置图床平台！"];
 		return;
@@ -168,10 +169,14 @@ static NSString *extracted(NSData *finData) {
                                                                            checkCrc:NO
                                                                  cancellationSignal:nil];
                 __block typeof(upManager) __weakOption = upManager;
+        NSString *key = [QiniuUploadManger getKeyWithURL:nil
+                                                    data:finData];
                 complateBlock complate = ^(NSString *token) {
+                    if (token.length == 0) {
+                        token = [QiniuUploadManger getTokenWithModel:model];
+                    }
                     [__weakOption putData:finData
-                                      key:[QiniuUploadManger getKeyWithURL:nil
-                                                                      data:finData]
+                                      key:key
                                     token:token
                                  complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
                         NSLog(@"info ===== %@", info);

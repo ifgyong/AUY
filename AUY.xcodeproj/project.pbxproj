@@ -11,12 +11,16 @@
 		A50307FA23A475FE004A9260 /* PreGifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50307F923A475FE004A9260 /* PreGifModel.swift */; };
 		A50307FC23A4786D004A9260 /* NSImagePlayGIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50307FB23A4786D004A9260 /* NSImagePlayGIf.swift */; };
 		A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503082323A91B49004A9260 /* NSAlertCategory.swift */; };
+		A55F0CAB23AF337F00B69D48 /* FYDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F0CAA23AF337F00B69D48 /* FYDragView.m */; };
 		A5826E4A239FE47000ED64ED /* QNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5826E49239FE47000ED64ED /* QNModel.m */; };
 		A5D86D4523AA6F0B009D94D8 /* NSImage+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */; };
 		CE3D15CAABD4BD87140A23A6 /* Pods_AUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323F65EDC78946814AFB1C11 /* Pods_AUY.framework */; };
 		EE3EB92B23A8A27600BCB958 /* NSColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB92A23A8A27600BCB958 /* NSColorCategory.swift */; };
 		EE3EB92D23A8B7B900BCB958 /* FYCopyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB92C23A8B7B900BCB958 /* FYCopyTextField.swift */; };
 		EE3EB93423A8D92D00BCB958 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3EB93323A8D92D00BCB958 /* test.png */; };
+		EE648F0623B2F44A0033BC94 /* AUYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0523B2F44A0033BC94 /* AUYTests.swift */; };
+		EE648F0E23B2F52B0033BC94 /* UploadImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */; };
+		EE72467C23B195760049DF10 /* FYDragVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE72467B23B195760049DF10 /* FYDragVC.swift */; };
 		EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD31239F735100B965D6 /* UtilTool.m */; };
 		EE9DBD37239F735200B965D6 /* FYReceivedMsgObj.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD35239F735100B965D6 /* FYReceivedMsgObj.m */; };
 		EE9DBD3A239F7E2900B965D6 /* QiniuUploadManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD39239F7E2900B965D6 /* QiniuUploadManger.m */; };
@@ -45,7 +49,18 @@
 		EEFDD27523A74786004D7E3B /* FYToolBarItemIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFDD27423A74786004D7E3B /* FYToolBarItemIdentifiers.swift */; };
 		EEFDD28923A7689C004D7E3B /* URLCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFDD28823A7689C004D7E3B /* URLCategory.swift */; };
 		EEFDD28B23A77C73004D7E3B /* RectCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFDD28A23A77C73004D7E3B /* RectCategory.swift */; };
+		F89F1B63130B996F40DFB4A3 /* Pods_AUYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7D58EA16D937DFCE8C7438 /* Pods_AUYTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE648F0823B2F44A0033BC94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEF8A419239A458D00C2CC9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEF8A420239A458D00C2CC9A;
+			remoteInfo = AUY;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EEC1566D23AB382B000D31A1 /* Embed App Extensions */ = {
@@ -74,6 +89,7 @@
 		166D7AF9D4FFBB85FC84D202 /* Pods_XPCService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XPCService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		323F65EDC78946814AFB1C11 /* Pods_AUY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		355C63EC24B5990AC6AAF6D2 /* Pods-XPCService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPCService.release.xcconfig"; path = "Target Support Files/Pods-XPCService/Pods-XPCService.release.xcconfig"; sourceTree = "<group>"; };
+		4F223669F73E670EFB04E2E9 /* Pods-AUYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUYTests.release.xcconfig"; path = "Target Support Files/Pods-AUYTests/Pods-AUYTests.release.xcconfig"; sourceTree = "<group>"; };
 		53AF6D2D521F94ED11BC8D0D /* Pods-AUY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUY.release.xcconfig"; path = "Target Support Files/Pods-AUY/Pods-AUY.release.xcconfig"; sourceTree = "<group>"; };
 		873C1B007719FEDBF38F236D /* Pods-AUY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUY.debug.xcconfig"; path = "Target Support Files/Pods-AUY/Pods-AUY.debug.xcconfig"; sourceTree = "<group>"; };
 		9E23685BD08E3FD285F633DE /* Pods-XPCService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XPCService.debug.xcconfig"; path = "Target Support Files/Pods-XPCService/Pods-XPCService.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,16 +99,23 @@
 		A503082323A91B49004A9260 /* NSAlertCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAlertCategory.swift; sourceTree = "<group>"; };
 		A5350C2A239A9AF8000C1518 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5350C2C239A9B02000C1518 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A55F0CA923AF337F00B69D48 /* FYDragView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDragView.h; sourceTree = "<group>"; };
+		A55F0CAA23AF337F00B69D48 /* FYDragView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDragView.m; sourceTree = "<group>"; };
 		A5826E40239E96C900ED64ED /* AUY Extension-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AUY Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5826E48239FE47000ED64ED /* QNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNModel.h; sourceTree = "<group>"; };
 		A5826E49239FE47000ED64ED /* QNModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNModel.m; sourceTree = "<group>"; };
 		A5D86D4323AA6F0B009D94D8 /* NSImage+Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSImage+Format.h"; path = "AUY/Util/NSImage+Format.h"; sourceTree = SOURCE_ROOT; };
 		A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Format.m"; path = "AUY/Util/NSImage+Format.m"; sourceTree = SOURCE_ROOT; };
+		A9A5DBF0BF6512DCFE7C2900 /* Pods-AUYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUYTests.debug.xcconfig"; path = "Target Support Files/Pods-AUYTests/Pods-AUYTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA7D58EA16D937DFCE8C7438 /* Pods_AUYTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AUYTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3EB92A23A8A27600BCB958 /* NSColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorCategory.swift; sourceTree = "<group>"; };
 		EE3EB92C23A8B7B900BCB958 /* FYCopyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYCopyTextField.swift; sourceTree = "<group>"; };
 		EE3EB93323A8D92D00BCB958 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		EE9DBD26239F310E00B965D6 /* PostMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostMsg.h; sourceTree = "<group>"; };
-		EE9DBD27239F310E00B965D6 /* PostMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostMsg.m; sourceTree = "<group>"; };
+		EE648F0323B2F44A0033BC94 /* AUYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE648F0523B2F44A0033BC94 /* AUYTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUYTests.swift; sourceTree = "<group>"; };
+		EE648F0723B2F44A0033BC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageTest.swift; sourceTree = "<group>"; };
+		EE72467B23B195760049DF10 /* FYDragVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYDragVC.swift; sourceTree = "<group>"; };
 		EE9DBD30239F735100B965D6 /* UtilTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilTool.h; sourceTree = "<group>"; };
 		EE9DBD31239F735100B965D6 /* UtilTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilTool.m; sourceTree = "<group>"; };
 		EE9DBD34239F735100B965D6 /* FYReceivedMsgObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYReceivedMsgObj.h; sourceTree = "<group>"; };
@@ -103,7 +126,6 @@
 		EE9DBD3C239F88B300B965D6 /* NSObject+token.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+token.m"; sourceTree = "<group>"; };
 		EE9DBD4123A08AE900B965D6 /* Nofitication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nofitication.swift; sourceTree = "<group>"; };
 		EE9DBD4323A0D9E400B965D6 /* PasetedBoardManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasetedBoardManger.swift; sourceTree = "<group>"; };
-		EE9E66E023A316F80015F910 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		EE9E676C23A36A220015F910 /* FYImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYImageCell.swift; sourceTree = "<group>"; };
 		EE9E677423A722D20015F910 /* DataSettingCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSettingCenter.swift; sourceTree = "<group>"; };
 		EEA4B66E23A1D01E00722734 /* Paseteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paseteboard.swift; sourceTree = "<group>"; };
@@ -126,23 +148,20 @@
 		EEF8A42D239A458F00C2CC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF8A42F239A458F00C2CC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEF8A439239A458F00C2CC9A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		EEF8A43C239A458F00C2CC9A /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
-		EEF8A443239A458F00C2CC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEF8A446239A458F00C2CC9A /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
-		EEF8A448239A458F00C2CC9A /* AUY_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AUY_Extension.entitlements; sourceTree = "<group>"; };
-		EEF8A452239A468000C2CC9A /* VolumeManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeManger.swift; sourceTree = "<group>"; };
-		EEF8A455239A5B5F00C2CC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EEF8A4FF239E230400C2CC9A /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
-		EEF8A501239E230400C2CC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEF8A502239E230400C2CC9A /* ptherEx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ptherEx.entitlements; sourceTree = "<group>"; };
-		EEF8A575239E3EBD00C2CC9A /* AUY_Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AUY_Extension-Bridging-Header.h"; sourceTree = "<group>"; };
-		EEF8A576239E3F0600C2CC9A /* ptherEx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ptherEx-Bridging-Header.h"; sourceTree = "<group>"; };
 		EEFDD27423A74786004D7E3B /* FYToolBarItemIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYToolBarItemIdentifiers.swift; sourceTree = "<group>"; };
 		EEFDD28823A7689C004D7E3B /* URLCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCategory.swift; sourceTree = "<group>"; };
 		EEFDD28A23A77C73004D7E3B /* RectCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EE648F0023B2F44A0033BC94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89F1B63130B996F40DFB4A3 /* Pods_AUYTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEF8A41E239A458D00C2CC9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +180,8 @@
 				53AF6D2D521F94ED11BC8D0D /* Pods-AUY.release.xcconfig */,
 				9E23685BD08E3FD285F633DE /* Pods-XPCService.debug.xcconfig */,
 				355C63EC24B5990AC6AAF6D2 /* Pods-XPCService.release.xcconfig */,
+				A9A5DBF0BF6512DCFE7C2900 /* Pods-AUYTests.debug.xcconfig */,
+				4F223669F73E670EFB04E2E9 /* Pods-AUYTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -192,6 +213,16 @@
 				EE3EB93323A8D92D00BCB958 /* test.png */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		EE648F0423B2F44A0033BC94 /* AUYTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE648F0523B2F44A0033BC94 /* AUYTests.swift */,
+				EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */,
+				EE648F0723B2F44A0033BC94 /* Info.plist */,
+			);
+			path = AUYTests;
 			sourceTree = "<group>";
 		};
 		EE9DBD2F239F735100B965D6 /* Util */ = {
@@ -249,6 +280,9 @@
 		EEC1563C23A9D1FB000D31A1 /* popVC */ = {
 			isa = PBXGroup;
 			children = (
+				A55F0CA923AF337F00B69D48 /* FYDragView.h */,
+				A55F0CAA23AF337F00B69D48 /* FYDragView.m */,
+				EE72467B23B195760049DF10 /* FYDragVC.swift */,
 				EEC1565823A9F325000D31A1 /* FYOpenDragFileView.swift */,
 				EEC1565423A9D23D000D31A1 /* FYPopViewController.swift */,
 				EEC1565523A9D23D000D31A1 /* FYPopViewController.xib */,
@@ -282,8 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF8A423239A458D00C2CC9A /* AUY */,
-				EEF8A43B239A458F00C2CC9A /* AUY Extension */,
-				EEF8A4FE239E230400C2CC9A /* ptherEx */,
+				EE648F0423B2F44A0033BC94 /* AUYTests */,
 				EEF8A438239A458F00C2CC9A /* Frameworks */,
 				EEF8A422239A458D00C2CC9A /* Products */,
 				229AC06C009B462AE357A806 /* Pods */,
@@ -294,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF8A421239A458D00C2CC9A /* AUY.app */,
+				EE648F0323B2F44A0033BC94 /* AUYTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,41 +359,34 @@
 				EEF8A439239A458F00C2CC9A /* Cocoa.framework */,
 				323F65EDC78946814AFB1C11 /* Pods_AUY.framework */,
 				166D7AF9D4FFBB85FC84D202 /* Pods_XPCService.framework */,
+				AA7D58EA16D937DFCE8C7438 /* Pods_AUYTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EEF8A43B239A458F00C2CC9A /* AUY Extension */ = {
-			isa = PBXGroup;
-			children = (
-				EEF8A43C239A458F00C2CC9A /* FinderSync.swift */,
-				EE9E66E023A316F80015F910 /* Notification.swift */,
-				EE9DBD26239F310E00B965D6 /* PostMsg.h */,
-				EE9DBD27239F310E00B965D6 /* PostMsg.m */,
-				EEF8A575239E3EBD00C2CC9A /* AUY_Extension-Bridging-Header.h */,
-				EEF8A452239A468000C2CC9A /* VolumeManger.swift */,
-				EEF8A443239A458F00C2CC9A /* Info.plist */,
-				EEF8A446239A458F00C2CC9A /* ToolbarItemIcon.pdf */,
-				EEF8A448239A458F00C2CC9A /* AUY_Extension.entitlements */,
-				EEF8A455239A5B5F00C2CC9A /* Assets.xcassets */,
-			);
-			path = "AUY Extension";
-			sourceTree = "<group>";
-		};
-		EEF8A4FE239E230400C2CC9A /* ptherEx */ = {
-			isa = PBXGroup;
-			children = (
-				EEF8A4FF239E230400C2CC9A /* FinderSync.swift */,
-				EEF8A501239E230400C2CC9A /* Info.plist */,
-				EEF8A502239E230400C2CC9A /* ptherEx.entitlements */,
-				EEF8A576239E3F0600C2CC9A /* ptherEx-Bridging-Header.h */,
-			);
-			path = ptherEx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EE648F0223B2F44A0033BC94 /* AUYTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE648F0C23B2F44A0033BC94 /* Build configuration list for PBXNativeTarget "AUYTests" */;
+			buildPhases = (
+				B3AA95FE44B5B49A2E3733D1 /* [CP] Check Pods Manifest.lock */,
+				EE648EFF23B2F44A0033BC94 /* Sources */,
+				EE648F0023B2F44A0033BC94 /* Frameworks */,
+				EE648F0123B2F44A0033BC94 /* Resources */,
+				263D40B2551E98D66DAA575B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE648F0923B2F44A0033BC94 /* PBXTargetDependency */,
+			);
+			name = AUYTests;
+			productName = AUYTests;
+			productReference = EE648F0323B2F44A0033BC94 /* AUYTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EEF8A420239A458D00C2CC9A /* AUY */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEF8A44F239A458F00C2CC9A /* Build configuration list for PBXNativeTarget "AUY" */;
@@ -371,6 +398,7 @@
 				EEF8A44E239A458F00C2CC9A /* Embed App Extensions */,
 				41DB7A836BE6D59F1CC1EBBD /* [CP] Embed Pods Frameworks */,
 				EEC1566D23AB382B000D31A1 /* Embed App Extensions */,
+				EE72467D23B1A5A90049DF10 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -394,6 +422,10 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = www.fgyong.cn;
 				TargetAttributes = {
+					EE648F0223B2F44A0033BC94 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = EEF8A420239A458D00C2CC9A;
+					};
 					EEF8A420239A458D00C2CC9A = {
 						CreatedOnToolsVersion = 11.2.1;
 						SystemCapabilities = {
@@ -424,11 +456,19 @@
 			projectRoot = "";
 			targets = (
 				EEF8A420239A458D00C2CC9A /* AUY */,
+				EE648F0223B2F44A0033BC94 /* AUYTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EE648F0123B2F44A0033BC94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEF8A41F239A458D00C2CC9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +486,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		263D40B2551E98D66DAA575B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AUYTests/Pods-AUYTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AUYTests/Pods-AUYTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AUYTests/Pods-AUYTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		41DB7A836BE6D59F1CC1EBBD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +519,45 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AUY/Pods-AUY-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B3AA95FE44B5B49A2E3733D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AUYTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE72467D23B1A5A90049DF10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\n#plist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n#buildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\n\n#BundleVersion=$(( $number + 1 ))\n#/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $BundleVersion\" \"${plist}\"\n";
 		};
 		F9E5FDBB78E77E5232F41B6C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -488,6 +584,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EE648EFF23B2F44A0033BC94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE648F0E23B2F52B0033BC94 /* UploadImageTest.swift in Sources */,
+				EE648F0623B2F44A0033BC94 /* AUYTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEF8A41D239A458D00C2CC9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +620,7 @@
 				A50307FA23A475FE004A9260 /* PreGifModel.swift in Sources */,
 				EE3EB92D23A8B7B900BCB958 /* FYCopyTextField.swift in Sources */,
 				EEC1564923A9D1FB000D31A1 /* FYSettingView.swift in Sources */,
+				A55F0CAB23AF337F00B69D48 /* FYDragView.m in Sources */,
 				A50307F423A3CF70004A9260 /* FYCreateGif.swift in Sources */,
 				EEF8A427239A458E00C2CC9A /* AppDelegate.swift in Sources */,
 				EEC1564C23A9D1FB000D31A1 /* ViewControllTBDelegate.swift in Sources */,
@@ -522,10 +628,19 @@
 				EEFDD27523A74786004D7E3B /* FYToolBarItemIdentifiers.swift in Sources */,
 				EEC1565923A9F325000D31A1 /* FYOpenDragFileView.swift in Sources */,
 				EE9DBD3A239F7E2900B965D6 /* QiniuUploadManger.m in Sources */,
+				EE72467C23B195760049DF10 /* FYDragVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE648F0923B2F44A0033BC94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEF8A420239A458D00C2CC9A /* AUY */;
+			targetProxy = EE648F0823B2F44A0033BC94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EEF8A428239A458E00C2CC9A /* Main.storyboard */ = {
@@ -539,6 +654,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EE648F0A23B2F44A0033BC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A5DBF0BF6512DCFE7C2900 /* Pods-AUYTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PU5CP57746;
+				INFOPLIST_FILE = AUYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = FY.AUYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUY.app/Contents/MacOS/AUY";
+			};
+			name = Debug;
+		};
+		EE648F0B23B2F44A0033BC94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F223669F73E670EFB04E2E9 /* Pods-AUYTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PU5CP57746;
+				INFOPLIST_FILE = AUYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = FY.AUYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AUY.app/Contents/MacOS/AUY";
+			};
+			name = Release;
+		};
 		EEF8A449239A458F00C2CC9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -661,7 +820,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = C3EKTD5HP5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = AUY/Info.plist;
@@ -670,6 +829,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.auy.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -687,7 +847,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = C3EKTD5HP5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = AUY/Info.plist;
@@ -696,6 +856,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.auy.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -707,6 +868,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EE648F0C23B2F44A0033BC94 /* Build configuration list for PBXNativeTarget "AUYTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE648F0A23B2F44A0033BC94 /* Debug */,
+				EE648F0B23B2F44A0033BC94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEF8A41C239A458D00C2CC9A /* Build configuration list for PBXProject "AUY" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,5 +10,6 @@ import Foundation
 
 
 struct URLCategory {
-	static let commentOpenURL = "http://fgyong.cn/about"
+	static let commentOpenURL = "https://github.com/ifgyong/AUY/issues"
+    static let helpOpenURL = "https://github.com/ifgyong/AUY/wiki"
 }

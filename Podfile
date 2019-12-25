@@ -35,10 +35,9 @@ end
 #
 # end
 
-#target 'XPCService' do
-#  # Comment the next line if you don't want to use dynamic frameworks
-#  use_frameworks!
-#
-#  # Pods for XPCService
-#
-#end
+target 'AUYTests' do
+  use_frameworks!
+
+#	pod 'Quick', '~>1.0.0'
+#	pod 'Nimble', '~>5.0.0'
+end

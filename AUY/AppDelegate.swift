@@ -19,6 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var changeCount =  0//上次拖动计数
 	// icon 状态栏显示
 	var popover :NSPopover?
+	var dragViewC:NSWindowController?
+	var dragView:FYDragView?
 // MARK: 打开设置界面
 	@IBAction func openSettingWindow(_ sender: NSMenuItem) {
 		let wn = FYSettingWindow(contentRect: RectCatory.kWindowSettingRect,
@@ -29,47 +31,64 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		let wc = NSWindowController(window: wn)
 		wc.showWindow(nil)
 	}
-
+	var keyBoard :NSPasteboard?
 	func addEventLisen(){
 		
 		// MARK: 监听鼠标 文件移动
 		let _ = NSEvent.addGlobalMonitorForEvents(matching: .leftMouseDragged) { (ev) in
-            let pb = NSPasteboard.init(name: .drag)
-            let numsDic = pb.propertyList(forType: .fileURL)
+			if self.keyBoard == nil{
+				let pb = NSPasteboard.init(name: .drag)
+				//添加 出现faild box error
+//				let numsDic = pb.propertyList(forType: .fileURL)
+
+				if  self.changeCount != pb.changeCount{
+					self.changeCount = pb.changeCount
+						self.showPopVC()
+				}
+				self.keyBoard = pb
+			}else{
+				if  self.changeCount != self.keyBoard!.changeCount{
+					self.changeCount = self.keyBoard!.changeCount
+						self.showPopVC()
+				}
+			}
             
-            if  numsDic != nil && self.changeCount != pb.changeCount{
-                self.changeCount = pb.changeCount
-                    self.showPopVC()
-            }
 		}
-		
-		
 		let _ = NSEvent.addGlobalMonitorForEvents(matching: .leftMouseUp) { (ev) in
 			self.closePopVC()
 		}
-		
-//		let _ = NSEvent.addLocalMonitorForEvents(matching: .leftMouseDragged, handler: { (ev) -> NSEvent? in
-//			print(ev)
-//			return ev
-//		})
 	}
 	func setupPopVC(){
 		if popover == nil {
 			popover = NSPopover()
 			let vc = FYPopViewController(nibName: "FYPopViewController", bundle: nil)
 			vc.viewsub.delegate = self
+			
+//			let wind = NSWindow(contentViewController: vc)
+//			wind.styleMask = [.closable]
+//			let winVC = NSWindowController(window: wind)
+//
+//			self.dragViewC = winVC;
+			
 			popover?.contentViewController = vc
-			self.popover?.behavior = .transient
+			self.popover?.behavior = .semitransient
+			self.popover?.animates = true
 			self.popover?.delegate = self
 		}
 	}
 	func closePopVC() -> Void {
 		self.popIsShow = false
 		self.popover?.close()
+	
+//		self.dragViewC?.close()
 	}
 	// MARK: 显示popVC
 	func showPopVC(){
-		self.popIsShow  = true
+//		self.popIsShow  = true
+//		self.dragViewC!.showWindow(nil)
+//
+//		return;
+		
 		guard let vc = viewFromPop else {
 			let views = NSApp.windows
 			for i in views {
@@ -154,7 +173,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /// :MARK 再次点击reopen window
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
        
-        let wind = sender.orderedWindows[0]
+		if sender.orderedWindows.count == 0 {
+			return false
+		}
+		let wind = sender.orderedWindows[0]
         wind.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
         return true

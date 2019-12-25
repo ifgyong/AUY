@@ -30,4 +30,8 @@ class FYAboutMeVC: NSViewController {
 //		print(bundle)
     }
     
+    @IBAction func openURL(_ sender: Any) {
+        NSWorkspace.shared.open(URL(string: URLCategory.commentOpenURL)!)
+
+    }
 }
