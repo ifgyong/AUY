@@ -2,6 +2,7 @@ AUY.xcworkspace/
 **/*.xcuserstate
 *.xcworkspace/*
 .DBStore/*
+._*.xcodeproj
 ._*.swift
 ._*.m
 ._*.h
