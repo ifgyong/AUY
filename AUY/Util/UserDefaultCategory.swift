@@ -13,7 +13,7 @@ let kUserDefaultUploadType = "kUserDefaultUploadType";
 // 配置 参数设置
 extension UserDefaults{
 	func setUploadType( ty:UploadType) -> Void {
-		self .set(ty, forKey: kUserDefaultUploadType)
+		self .set(ty.raw(), forKey: kUserDefaultUploadType)
 		self.synchronize()
 	}
 	
