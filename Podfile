@@ -13,6 +13,8 @@ target 'AUY' do
 #	pod "SwiftyJSON", "~> 2.0"
 #	pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'AFNetworking', '~> 3.0.4'
+	pod 'AliyunOSSiOS'
+
 	# pod 'SnapKit', '~> 4.0.1'
 end
 #- App Extension

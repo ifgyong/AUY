@@ -9,6 +9,17 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+static NSString * kQiNiuKey = @"kQiNiuKey";
+static NSString * kQiNiuYuMingKey = @"kQiNiuYuMingKey";
+
+static NSString * kQiNiuaccessKey = @"kQiNiuaccessKey";
+
+static NSString * kQiNiusecretKey = @"kQiNiusecretKey";
+
+static NSString * kQiNiubuckName = @"kQiNiubuckName";
+
+static NSString * kOSS_ENDPOINT = @"kOSS_ENDPOINT";
+
 
 @interface QNModel : NSObject
 
@@ -16,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString *accessKey;
 @property (nonatomic,strong) NSString *secretKey;
 @property (nonatomic,strong) NSString *buckName;
+@property (nonatomic,strong) NSString *yuming;
 
 
 + (QNModel *)getSaveModel;

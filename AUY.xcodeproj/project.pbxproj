@@ -11,6 +11,8 @@
 		A50307FA23A475FE004A9260 /* PreGifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50307F923A475FE004A9260 /* PreGifModel.swift */; };
 		A50307FC23A4786D004A9260 /* NSImagePlayGIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50307FB23A4786D004A9260 /* NSImagePlayGIf.swift */; };
 		A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503082323A91B49004A9260 /* NSAlertCategory.swift */; };
+		A55A63E623B3A7BB00D413A2 /* AliYunUploadMangre.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A63E423B3A7BB00D413A2 /* AliYunUploadMangre.m */; };
+		A55A63E923B3A7D000D413A2 /* AliYunClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A63E823B3A7D000D413A2 /* AliYunClient.m */; };
 		A55F0CAB23AF337F00B69D48 /* FYDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F0CAA23AF337F00B69D48 /* FYDragView.m */; };
 		A5826E4A239FE47000ED64ED /* QNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5826E49239FE47000ED64ED /* QNModel.m */; };
 		A5D86D4523AA6F0B009D94D8 /* NSImage+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */; };
@@ -18,13 +20,18 @@
 		EE3EB92B23A8A27600BCB958 /* NSColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB92A23A8A27600BCB958 /* NSColorCategory.swift */; };
 		EE3EB92D23A8B7B900BCB958 /* FYCopyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB92C23A8B7B900BCB958 /* FYCopyTextField.swift */; };
 		EE3EB93423A8D92D00BCB958 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3EB93323A8D92D00BCB958 /* test.png */; };
+		EE59883623B440DE00E04F18 /* UserDefaultCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59883523B440DE00E04F18 /* UserDefaultCategory.swift */; };
+		EE59883823B44A4500E04F18 /* UploadSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59883723B44A4500E04F18 /* UploadSetting.swift */; };
+		EE59883E23B483E800E04F18 /* NSObject+token.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59883C23B483E700E04F18 /* NSObject+token.m */; };
+		EE59884223B4840700E04F18 /* QiniuUploadManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59884123B4840700E04F18 /* QiniuUploadManger.m */; };
+		EE59884523B4850800E04F18 /* UploadManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59884423B4850800E04F18 /* UploadManger.m */; };
+		EE59884823B48D0A00E04F18 /* UploadProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59884723B48D0A00E04F18 /* UploadProtocol.m */; };
+		EE59884A23B4983900E04F18 /* UploadImagePasted.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59884923B4983900E04F18 /* UploadImagePasted.swift */; };
 		EE648F0623B2F44A0033BC94 /* AUYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0523B2F44A0033BC94 /* AUYTests.swift */; };
 		EE648F0E23B2F52B0033BC94 /* UploadImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */; };
 		EE72467C23B195760049DF10 /* FYDragVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE72467B23B195760049DF10 /* FYDragVC.swift */; };
 		EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD31239F735100B965D6 /* UtilTool.m */; };
 		EE9DBD37239F735200B965D6 /* FYReceivedMsgObj.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD35239F735100B965D6 /* FYReceivedMsgObj.m */; };
-		EE9DBD3A239F7E2900B965D6 /* QiniuUploadManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD39239F7E2900B965D6 /* QiniuUploadManger.m */; };
-		EE9DBD3D239F88B300B965D6 /* NSObject+token.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD3C239F88B300B965D6 /* NSObject+token.m */; };
 		EE9DBD4223A08AE900B965D6 /* Nofitication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD4123A08AE900B965D6 /* Nofitication.swift */; };
 		EE9DBD4423A0D9E400B965D6 /* PasetedBoardManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD4323A0D9E400B965D6 /* PasetedBoardManger.swift */; };
 		EE9E676D23A36A220015F910 /* FYImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E676C23A36A220015F910 /* FYImageCell.swift */; };
@@ -99,6 +106,10 @@
 		A503082323A91B49004A9260 /* NSAlertCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAlertCategory.swift; sourceTree = "<group>"; };
 		A5350C2A239A9AF8000C1518 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5350C2C239A9B02000C1518 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A55A63E323B3A7BB00D413A2 /* AliYunUploadMangre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliYunUploadMangre.h; sourceTree = "<group>"; };
+		A55A63E423B3A7BB00D413A2 /* AliYunUploadMangre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliYunUploadMangre.m; sourceTree = "<group>"; };
+		A55A63E723B3A7D000D413A2 /* AliYunClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliYunClient.h; sourceTree = "<group>"; };
+		A55A63E823B3A7D000D413A2 /* AliYunClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliYunClient.m; sourceTree = "<group>"; };
 		A55F0CA923AF337F00B69D48 /* FYDragView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDragView.h; sourceTree = "<group>"; };
 		A55F0CAA23AF337F00B69D48 /* FYDragView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDragView.m; sourceTree = "<group>"; };
 		A5826E40239E96C900ED64ED /* AUY Extension-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AUY Extension-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -111,6 +122,17 @@
 		EE3EB92A23A8A27600BCB958 /* NSColorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorCategory.swift; sourceTree = "<group>"; };
 		EE3EB92C23A8B7B900BCB958 /* FYCopyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYCopyTextField.swift; sourceTree = "<group>"; };
 		EE3EB93323A8D92D00BCB958 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		EE59883523B440DE00E04F18 /* UserDefaultCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultCategory.swift; sourceTree = "<group>"; };
+		EE59883723B44A4500E04F18 /* UploadSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSetting.swift; sourceTree = "<group>"; };
+		EE59883C23B483E700E04F18 /* NSObject+token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+token.m"; sourceTree = "<group>"; };
+		EE59883D23B483E700E04F18 /* NSObject+token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+token.h"; sourceTree = "<group>"; };
+		EE59884023B4840700E04F18 /* QiniuUploadManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiniuUploadManger.h; sourceTree = "<group>"; };
+		EE59884123B4840700E04F18 /* QiniuUploadManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiniuUploadManger.m; sourceTree = "<group>"; };
+		EE59884323B4850800E04F18 /* UploadManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadManger.h; sourceTree = "<group>"; };
+		EE59884423B4850800E04F18 /* UploadManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadManger.m; sourceTree = "<group>"; };
+		EE59884623B48D0A00E04F18 /* UploadProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadProtocol.h; sourceTree = "<group>"; };
+		EE59884723B48D0A00E04F18 /* UploadProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadProtocol.m; sourceTree = "<group>"; };
+		EE59884923B4983900E04F18 /* UploadImagePasted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImagePasted.swift; sourceTree = "<group>"; };
 		EE648F0323B2F44A0033BC94 /* AUYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE648F0523B2F44A0033BC94 /* AUYTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUYTests.swift; sourceTree = "<group>"; };
 		EE648F0723B2F44A0033BC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,10 +142,6 @@
 		EE9DBD31239F735100B965D6 /* UtilTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilTool.m; sourceTree = "<group>"; };
 		EE9DBD34239F735100B965D6 /* FYReceivedMsgObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYReceivedMsgObj.h; sourceTree = "<group>"; };
 		EE9DBD35239F735100B965D6 /* FYReceivedMsgObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYReceivedMsgObj.m; sourceTree = "<group>"; };
-		EE9DBD38239F7E2900B965D6 /* QiniuUploadManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiniuUploadManger.h; sourceTree = "<group>"; };
-		EE9DBD39239F7E2900B965D6 /* QiniuUploadManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiniuUploadManger.m; sourceTree = "<group>"; };
-		EE9DBD3B239F88B300B965D6 /* NSObject+token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+token.h"; sourceTree = "<group>"; };
-		EE9DBD3C239F88B300B965D6 /* NSObject+token.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+token.m"; sourceTree = "<group>"; };
 		EE9DBD4123A08AE900B965D6 /* Nofitication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nofitication.swift; sourceTree = "<group>"; };
 		EE9DBD4323A0D9E400B965D6 /* PasetedBoardManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasetedBoardManger.swift; sourceTree = "<group>"; };
 		EE9E676C23A36A220015F910 /* FYImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYImageCell.swift; sourceTree = "<group>"; };
@@ -197,6 +215,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		A55A63E123B3A7BB00D413A2 /* AliYun */ = {
+			isa = PBXGroup;
+			children = (
+				A55A63E323B3A7BB00D413A2 /* AliYunUploadMangre.h */,
+				A55A63E423B3A7BB00D413A2 /* AliYunUploadMangre.m */,
+				A55A63E723B3A7D000D413A2 /* AliYunClient.h */,
+				A55A63E823B3A7D000D413A2 /* AliYunClient.m */,
+			);
+			path = AliYun;
+			sourceTree = "<group>";
+		};
 		A5826E47239FE44E00ED64ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +244,15 @@
 			path = source;
 			sourceTree = "<group>";
 		};
+		EE59883F23B4840700E04F18 /* QiNiu */ = {
+			isa = PBXGroup;
+			children = (
+				EE59884023B4840700E04F18 /* QiniuUploadManger.h */,
+				EE59884123B4840700E04F18 /* QiniuUploadManger.m */,
+			);
+			path = QiNiu;
+			sourceTree = "<group>";
+		};
 		EE648F0423B2F44A0033BC94 /* AUYTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,9 +266,15 @@
 		EE9DBD2F239F735100B965D6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				EE59883D23B483E700E04F18 /* NSObject+token.h */,
+				EE59883C23B483E700E04F18 /* NSObject+token.m */,
+				A5D86D4323AA6F0B009D94D8 /* NSImage+Format.h */,
+				A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */,
 				EE9DBD30239F735100B965D6 /* UtilTool.h */,
 				EE9DBD31239F735100B965D6 /* UtilTool.m */,
+				EE59883723B44A4500E04F18 /* UploadSetting.swift */,
 				EE9E677423A722D20015F910 /* DataSettingCenter.swift */,
+				EE59883523B440DE00E04F18 /* UserDefaultCategory.swift */,
 				EEFDD28823A7689C004D7E3B /* URLCategory.swift */,
 				A503082323A91B49004A9260 /* NSAlertCategory.swift */,
 				EEFDD28A23A77C73004D7E3B /* RectCategory.swift */,
@@ -248,12 +292,13 @@
 		EE9DBD32239F735100B965D6 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				EE9DBD38239F7E2900B965D6 /* QiniuUploadManger.h */,
-				EE9DBD39239F7E2900B965D6 /* QiniuUploadManger.m */,
-				EE9DBD3B239F88B300B965D6 /* NSObject+token.h */,
-				EE9DBD3C239F88B300B965D6 /* NSObject+token.m */,
-				A5D86D4323AA6F0B009D94D8 /* NSImage+Format.h */,
-				A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */,
+				EE59883F23B4840700E04F18 /* QiNiu */,
+				A55A63E123B3A7BB00D413A2 /* AliYun */,
+				EE59884323B4850800E04F18 /* UploadManger.h */,
+				EE59884423B4850800E04F18 /* UploadManger.m */,
+				EE59884923B4983900E04F18 /* UploadImagePasted.swift */,
+				EE59884623B48D0A00E04F18 /* UploadProtocol.h */,
+				EE59884723B48D0A00E04F18 /* UploadProtocol.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -375,7 +420,6 @@
 				EE648EFF23B2F44A0033BC94 /* Sources */,
 				EE648F0023B2F44A0033BC94 /* Frameworks */,
 				EE648F0123B2F44A0033BC94 /* Resources */,
-				263D40B2551E98D66DAA575B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -486,23 +530,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		263D40B2551E98D66DAA575B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AUYTests/Pods-AUYTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AUYTests/Pods-AUYTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AUYTests/Pods-AUYTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		41DB7A836BE6D59F1CC1EBBD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,9 +624,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE59884523B4850800E04F18 /* UploadManger.m in Sources */,
 				EEC1564B23A9D1FB000D31A1 /* ViewController.swift in Sources */,
 				EE9E677523A722D20015F910 /* DataSettingCenter.swift in Sources */,
 				EE9E676D23A36A220015F910 /* FYImageCell.swift in Sources */,
+				EE59883E23B483E800E04F18 /* NSObject+token.m in Sources */,
 				EEFDD28B23A77C73004D7E3B /* RectCategory.swift in Sources */,
 				A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */,
 				EEC1565623A9D23D000D31A1 /* FYPopViewController.swift in Sources */,
@@ -608,27 +637,32 @@
 				A5826E4A239FE47000ED64ED /* QNModel.m in Sources */,
 				EE9DBD37239F735200B965D6 /* FYReceivedMsgObj.m in Sources */,
 				EEA4B66F23A1D01E00722734 /* Paseteboard.swift in Sources */,
+				EE59883823B44A4500E04F18 /* UploadSetting.swift in Sources */,
 				EEC1564D23A9D1FB000D31A1 /* PreVC.swift in Sources */,
 				EEFDD28923A7689C004D7E3B /* URLCategory.swift in Sources */,
 				A5D86D4523AA6F0B009D94D8 /* NSImage+Format.m in Sources */,
 				EE3EB92B23A8A27600BCB958 /* NSColorCategory.swift in Sources */,
 				EE9DBD4423A0D9E400B965D6 /* PasetedBoardManger.swift in Sources */,
 				EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */,
-				EE9DBD3D239F88B300B965D6 /* NSObject+token.m in Sources */,
 				A50307FC23A4786D004A9260 /* NSImagePlayGIf.swift in Sources */,
 				EEC1D91F23A8818E0020874B /* FYWindowManger.swift in Sources */,
+				EE59884823B48D0A00E04F18 /* UploadProtocol.m in Sources */,
 				A50307FA23A475FE004A9260 /* PreGifModel.swift in Sources */,
 				EE3EB92D23A8B7B900BCB958 /* FYCopyTextField.swift in Sources */,
 				EEC1564923A9D1FB000D31A1 /* FYSettingView.swift in Sources */,
 				A55F0CAB23AF337F00B69D48 /* FYDragView.m in Sources */,
 				A50307F423A3CF70004A9260 /* FYCreateGif.swift in Sources */,
 				EEF8A427239A458E00C2CC9A /* AppDelegate.swift in Sources */,
+				A55A63E923B3A7D000D413A2 /* AliYunClient.m in Sources */,
+				A55A63E623B3A7BB00D413A2 /* AliYunUploadMangre.m in Sources */,
+				EE59884A23B4983900E04F18 /* UploadImagePasted.swift in Sources */,
 				EEC1564C23A9D1FB000D31A1 /* ViewControllTBDelegate.swift in Sources */,
 				EEC1564A23A9D1FB000D31A1 /* FYSettingWindow.swift in Sources */,
 				EEFDD27523A74786004D7E3B /* FYToolBarItemIdentifiers.swift in Sources */,
 				EEC1565923A9F325000D31A1 /* FYOpenDragFileView.swift in Sources */,
-				EE9DBD3A239F7E2900B965D6 /* QiniuUploadManger.m in Sources */,
+				EE59883623B440DE00E04F18 /* UserDefaultCategory.swift in Sources */,
 				EE72467C23B195760049DF10 /* FYDragVC.swift in Sources */,
+				EE59884223B4840700E04F18 /* QiniuUploadManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

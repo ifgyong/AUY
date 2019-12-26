@@ -27,6 +27,8 @@ class FYSettingView: NSView {
 	var accessKeyTextfile:T?
 	var secretKeyTextfile:T?
 	var selectedMenu:NSComboBox?
+    
+	var menuSelected:UploadType = .Unknow
 
 	
 	func configUI() {
@@ -48,10 +50,11 @@ class FYSettingView: NSView {
 		selectedMenu = NSComboBox(frame: CGRect(x: 20, y: 265, width: 85, height: 24))
 //		selectedMenu
 		selectedMenu!.addItem(withObjectValue: "七牛云")
-//		selectedMenu!.addItem(withObjectValue: "阿里云")
+		selectedMenu!.addItem(withObjectValue: "阿里云")
 //		selectedMenu!.addItem(withObjectValue: "腾讯云")
 		self.addSubview(selectedMenu!)
-        selectedMenu?.selectItem(at: 0)//默认七牛云
+		let defaultSelIndex = UserDefaults.standard.getUploadType()
+		selectedMenu?.selectItem(at: defaultSelIndex.raw())//默认七牛云
 //		selectedMenu.delegate = self
 		selectedMenu!.isEditable = false
 		let y = 225
@@ -81,14 +84,18 @@ class FYSettingView: NSView {
 		loadDataFromCache()
 	}
 	func loadDataFromCache() -> Void {
-		let model = QNModel.getSave()
-		if model.accessKey.count > 0{
-			yumingTextfile?.stringValue = QNModel.yuming()
-			accessKeyTextfile?.stringValue = model.accessKey
-			secretKeyTextfile?.stringValue = model.secretKey
-			buckNameTextfile?.stringValue = model.buckName
-			selectedMenu?.selectItem(at: 0)
+//		selectedMenu?.delegate = self
+		let ty = UserDefaults.standard.getUploadType().raw()
+		selectedMenu?.selectItem(at: ty)
+		let model =  QNModel.getSave()
+		
+		if model.accessKey.count  > 0{
+			yumingTextfile?.stringValue = model.yuming
+		    accessKeyTextfile?.stringValue = model.accessKey
+		    secretKeyTextfile?.stringValue = model.secretKey
+		    buckNameTextfile?.stringValue = model.buckName
 		}
+		
 	}
 	func getLabel(text:String,y:Int) -> NSText {
 		let textLabel = NSText(frame: CGRect(x: 20, y: y, width: 87, height: 16))
@@ -123,19 +130,49 @@ class FYSettingView: NSView {
 		if checkInput() {
 			let text = Bundle.main.url(forResource: "test.png", withExtension: nil)!
 			let da = try? Data(contentsOf: text)
+			menuSelected = UploadType.raw(selectedMenu!.indexOfSelectedItem)
+
 			let model = QNModel()
 			model.accessKey = accessKeyTextfile!.stringValue
 			model.secretKey = secretKeyTextfile!.stringValue
 			model.buckName = buckNameTextfile!.stringValue
-			QiniuUploadManger.testUploadData(da!, complate: { (_) in
-				QNModel.save(model)
-				QNModel.saveYuming(self.yumingTextfile!.stringValue)
-                NSAlert.show(msg: "配置成功",window: self.window!)
-			}, faild: { (_) in
-                NSAlert.show(msg: "配置失败,请确认秘钥是否正确",window: self.window!)
-			}, model: model)
+			model.yuming = yumingTextfile!.stringValue
+            switch menuSelected {
+			case .QiNiu:
+                qiNiuUpload(da: da!, model: model)
+			case .AliYun:
+				aliUpload(da: da!, model: model)
+			case .Tencent:break
+			case .Unknow:
+				print("未知选项")
+            default: break
+                
+            }
+			
 		}
 	}
+    func aliUpload(da:Data,model:QNModel) -> Void{
+		
+		AliYunUploadMangre.uploadTestAsync(da, model: model, complate: { (url) in
+			print(url)
+			QNModel.save(model)
+			UserDefaults.standard.setUploadType(ty: .AliYun)
+            NSAlert.show(msg: "配置成功",window: self.window!)
+		}) { (error) in
+            NSAlert.show(msg: "配置失败,请确认秘钥是否正确",window: self.window!)
+			print("error:\(error)")
+		}
+    }
+    // MARK: 七牛上传
+    func qiNiuUpload(da:Data,model:QNModel) -> Void {
+        QiniuUploadManger.testUploadData(da, complate: { (_) in
+            QNModel.save(model)
+			UserDefaults.standard.setUploadType(ty: .QiNiu)
+            NSAlert.show(msg: "配置成功",window: self.window!)
+        }, faild: { (_) in
+            NSAlert.show(msg: "配置失败,请确认秘钥是否正确",window: self.window!)
+        }, model: model)
+    }
 	func checkInput()->Bool{
 		if selectedMenu!.indexOfSelectedItem == -1 {
             NSAlert.show(msg: "请选择图床平台",window: self.window!)
@@ -155,17 +192,14 @@ class FYSettingView: NSView {
 		}
 		return true
 	}
-	
-
-	
 }
-extension FYSettingView :NSComboBoxDelegate,NSTextFieldDelegate,NSTextViewDelegate{
+extension FYSettingView : NSTextFieldDelegate,NSTextViewDelegate{
 	
 	override func keyUp(with event: NSEvent) {
-		print(event)
+//		print(event)
 	}
 	override func keyDown(with event: NSEvent) {
-		print(event)
+//		print(event)
 	}
 	//
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
@@ -207,19 +241,8 @@ extension FYSettingView :NSComboBoxDelegate,NSTextFieldDelegate,NSTextViewDelega
         }
 		else if commandSelector == #selector(NSStandardKeyBindingResponding.insertNewline(_:)){
 			self.window?.endEditing(for: nil)
+			return false
 		}
         return true
     }
 }
-//	// MARK: 模拟 复制 -> 粘贴
-//	func pastematchstyle () {
-//
-//		let event1 = CGEvent(keyboardEventSource: nil, virtualKey: 0x09, keyDown: true); // opt-shft-cmd-v down
-//		event1?.flags = [CGEventFlags.maskCommand, CGEventFlags.maskShift, CGEventFlags.maskAlternate]
-//		event1?.post(tap: CGEventTapLocation.cghidEventTap);
-//
-//		let event2 = CGEvent(keyboardEventSource: nil, virtualKey: 0x09, keyDown: false); // opt-shf-cmd-v up
-//	 //   event2?.flags = [CGEventFlags.maskCommand, CGEventFlags.maskShift, CGEventFlags.maskAlternate]
-//		event2?.post(tap: CGEventTapLocation.cghidEventTap);
-//
-//

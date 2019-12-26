@@ -8,14 +8,7 @@
 
 #import "QNModel.h"
 
-static NSString * kQiNiuKey = @"kQiNiuKey";
-static NSString * kQiNiuYuMingKey = @"kQiNiuYuMingKey";
 
-static NSString * kQiNiuaccessKey = @"kQiNiuaccessKey";
-
-static NSString * kQiNiusecretKey = @"kQiNiusecretKey";
-
-static NSString * kQiNiubuckName = @"kQiNiubuckName";
 
 
 
@@ -23,14 +16,15 @@ static NSString * kQiNiubuckName = @"kQiNiubuckName";
 
 + (QNModel *)getSaveModel{
 	NSMutableDictionary *user = [[NSUserDefaults standardUserDefaults] objectForKey:kQiNiuKey];
+	if (user.count == 0) {
+		return nil;
+	}
 	
 	QNModel *model = [QNModel new];
-	if (user.count == 0) {
-		return model;
-	}
 	model.accessKey = [user objectForKey:kQiNiuaccessKey];// @"nwSHDHj9dsf72FWAI2CxEo4TszpWpF-HmVR8Qwgd";
 	model.secretKey = [user objectForKey:kQiNiusecretKey]; //@"lnBhZthAOUsHq5oFjnvEVdjCk46L2W2pELmuwU2d";
 	model.buckName = [user objectForKey:kQiNiubuckName]; //@"fgyongblog";
+	model.yuming = [user objectForKey:kOSS_ENDPOINT];
 	return model;
 }
 + (void)saveModel:(QNModel *)model{
@@ -39,6 +33,7 @@ static NSString * kQiNiubuckName = @"kQiNiubuckName";
 	[dic setValue:model.accessKey forKey:kQiNiuaccessKey];
 	[dic setValue:model.secretKey forKey:kQiNiusecretKey];
 	[dic setValue:model.buckName forKey:kQiNiubuckName];
+	[dic setValue:model.yuming forKey:kOSS_ENDPOINT];
 	[user setObject:dic forKey:kQiNiuKey];
 	[user synchronize];
 }
