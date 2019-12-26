@@ -2,6 +2,7 @@ AUY.xcworkspace/
 **/*.xcuserstate
 *.xcworkspace/*
 .DBStore/*
+AUY/Model/._PreGifModel.swift
 ._*.swift
 ._*.m
 ._*.h
