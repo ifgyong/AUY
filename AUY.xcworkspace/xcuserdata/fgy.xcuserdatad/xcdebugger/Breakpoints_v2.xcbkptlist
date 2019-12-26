@@ -5,47 +5,34 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
-         <BreakpointContent
-            uuid = "D3F02A6C-A951-4DA4-A17C-6D25069FCE0F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            symbolName = ""
-            moduleName = "">
-            <Locations>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "396571AC-08FB-419D-80CC-016DFA382311"
+            uuid = "12DAB0BD-B138-4CB5-8D1A-B4ABD20A5FF3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AUY/Controllers/popVC/FYOpenDragFileView.swift"
+            filePath = "AUY/Request/AliYunUploadMangre.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "upload(sender:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "+uploadImage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73BE95A3-BDA0-4E64-9571-CF234E7E8C7F"
+            uuid = "9F179082-53BD-4D16-8B4D-ED186346B848"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AUY/Controllers/popVC/FYOpenDragFileView.swift"
+            filePath = "AUY/Request/AliYunUploadMangre.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "upload(sender:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "+uploadImage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

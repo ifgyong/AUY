@@ -124,7 +124,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem.button?.image = NSImage(named: "statusicon")
 	}
 	@IBAction func uploadImageFromPase(_ sender: NSMenuItem) {
-		QiniuUploadManger.uploadPasetedImage()
+		UploadImagePasted.uploadImageFromPasted()
 	}
 	/// 获取剪切板历史记录的最后一条
 	@IBAction func copyURL(_ sender: NSMenuItem) {

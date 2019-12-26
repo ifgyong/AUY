@@ -30,9 +30,8 @@ extension NSPasteboard{
 				paste.setString(msg, forType: .string)
 				return;
 			}
-		let yuming = QNModel.yuming()
+		let yuming = QNModel.getSave().yuming
 		if yuming.count > 0 {
-			
 			if (sub.range(of: yuming) == nil) {
 				paste.clearContents()
 				sub = msg
@@ -40,7 +39,6 @@ extension NSPasteboard{
 				sub =  "\(sub)\n\(msg)"
 			}
 		}
-			
 			paste.setString(sub, forType: .string)
 		}
 }

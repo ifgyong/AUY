@@ -38,7 +38,6 @@ class FYOpenDragFileView: NSImageView {
 	}
 	func setupWithActive(active:Bool) ->Void{
 		if active {
-//			let an = NSAnimation.init(duration: 0.25, animationCurve: .easeIn)
 			label.string = "松手开始上传图床";
 			label.font = NSFont.boldSystemFont(ofSize: 17);
 			// 27 167 242
@@ -55,15 +54,11 @@ class FYOpenDragFileView: NSImageView {
 	override func draggingEnded(_ sender: NSDraggingInfo) {
 		print("松手了")
 		setupWithActive(active: false)
-//        if isDraging {
-//            upload(sender: sender)
-//        }
 	}
 	// 进入当前view
 	override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
 		isDraging = true
 		setupWithActive(active: true)
-//        let op = NSDragOperation.copy
 		
         return [.copy]
 	}
@@ -98,21 +93,46 @@ class FYOpenDragFileView: NSImageView {
         guard let sender2 = sender else {
             return;
         }
-        guard let items = sender2.draggingPasteboard.propertyList(forType: .fileURL) else{
-                    return
-                }
+//        guard let items = sender2.draggingPasteboard.propertyList(forType: .fileURL) else{
+//			return
+//		}
+		guard let arr = sender2.draggingPasteboard.pasteboardItems  else {
+			return
+		}
         var datas = [Data]()
-        let itemArr =  items as? String
-        guard let itemNext = itemArr else {
-            return
-        }
-        let url = URL(string: itemNext)!
-        let data = try? Data(contentsOf : url)
-        guard let next = data else {
-            return
-        }
-        datas.append(next)
-		QiniuUploadManger.uploadImage(nil, data: datas)
+		for i in 0..<arr.count{
+			let item = arr[i]
+			let subArr = item.propertyList(forType: .fileURL)
+			guard let nextArr = subArr,let url = URL(string: nextArr as! String),let data = try? Data(contentsOf : url)  else {
+				continue;
+			}
+			datas.append(data)
+		}
+//        let itemArr =  items as? String
+//        guard let itemNext = itemArr else {
+//            return
+//        }
+//        let url = URL(string: itemNext)!
+//        let data = try? Data(contentsOf : url)
+//        guard let next = data else {
+//            return
+//        }
+//        datas.append(next)
+		
+		let ty = UserDefaults.standard.getUploadType()
+		switch ty {
+		case .QiNiu:
+			QiniuUploadManger.uploadImage(nil, data: datas)
+		case .AliYun:
+			let model = QNModel .getSave()
+			AliYunUploadMangre.uploadDatasAsync(datas, model: model, complate: { (url) in
+				UploadManger.share().complate(url);
+			}) { (error) in
+				UploadManger.share().faild(error);
+			}
+		default:
+			break;
+		}
     }
 	
 	
