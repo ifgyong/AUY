@@ -37,16 +37,19 @@
 	});
 	return manger;
 }
-+(void)uploadPasetedImage{
-	NSPasteboard * paste = NSPasteboard.generalPasteboard;
++ (void)uploadDataFromPasted{
+		NSPasteboard * paste = NSPasteboard.generalPasteboard;
 	NSData *data = [paste dataForType:NSPasteboardTypePNG];
 	[UploadManger share].imageIndex = 0;
 	if (data == nil) {
 		[FYNotification.share pushErrorWithMsg:@"剪切板没有图片哦"];
 	} else{
 		[FYSourceManger.share addImageWithImg:[[NSImage alloc]initWithData:data]];
-		[QiniuUploadManger uploadImage:nil
-								  data:@[data]];
+		[QiniuUploadManger uploadImageData:@[data] complate:^(NSString * _Nonnull url) {
+			[UploadManger share].complate(url);
+		} faild:^(NSString * _Nonnull error) {
+			[UploadManger share].faild(error);
+		}];
 	}
 }
 -(instancetype)init{
@@ -132,38 +135,25 @@ static NSString *extracted(NSData *finData) {
 													 buck:model.buckName];
 					complate(token);
 }
-+ (void)uploadImage:(NSArray<NSString*>  * _Nullable)urls
-               data:(NSArray<NSData*>  * _Nullable )datas{
++ (void)uploadImageData:(NSArray<NSData*>  * _Nullable )datas
+		   complate:(nonnull ComplateCallback)complateCallback
+			   faild:(nonnull ComplateCallback)faildCallback{
 	if ([QiniuUploadManger hasInfo] == NO) {
 		[[FYNotification share] pushErrorWithMsg:@"请先设置图床平台！"];
 		return;
 	}
-    if (urls.count > 0) {
-        [UploadManger share].filesCount = urls.count;
-    }
+
     else if(datas.count){
         [UploadManger share].filesCount += datas.count;
     }
-    NSMutableArray<NSData *> *mutData = [NSMutableArray array];
-    NSFileManager *manger = [NSFileManager defaultManager];
-
-    for (int i = 0; i < urls.count; i ++) {
-        NSString *obj = urls[i];
-        if([manger fileExistsAtPath:obj]){
-             NSData *itemData = [NSData dataWithContentsOfURL:[NSURL URLWithString:obj]];
-             [mutData addObject:itemData];
-         }
-    }
-
-    [mutData addObjectsFromArray:datas];
-    if (mutData.count == 0) {
+    if (datas.count == 0) {
         [FYNotification.share pushErrorWithMsg:@"图片为空哦！"];
         return;
     }
 	//重置当前索引
 	[UploadManger share].imageIndex = 0;
 	[[UploadManger share] setDefaultBlock];//设置默认的回调
-    [mutData enumerateObjectsUsingBlock:^(NSData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [datas enumerateObjectsUsingBlock:^(NSData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSData *finData = obj;
         QNModel *model=[QiniuUploadManger getModel];
                 QNUploadManager *upManager = [[QNUploadManager alloc] init];
@@ -190,9 +180,16 @@ static NSString *extracted(NSData *finData) {
                                             if (resp.count > 0) {
 												NSString *yuming = [QNModel getSaveModel].yuming;
                                                 NSString *fullURL=[NSString stringWithFormat:@"![](%@/%@)",yuming,key];
-												[UploadManger share].complate(fullURL);
+#if DEBUG
+												NSLog(@" %@",fullURL);
+#endif
+												if (complateCallback) {
+													complateCallback(fullURL);
+												}
                                             }else{
-												[UploadManger share].faild(@"发生错误，请重新上传！");
+												if (faildCallback) {
+													faildCallback(@"发生错误，请重新上传！");
+												}
                                             }
                     }
                                    option:uploadOption];
@@ -306,6 +303,22 @@ static NSString *extracted(NSData *finData) {
     [dic setObject:escapeNumber forKey:@"deadline"];
     NSString *json = [QiniuUploadManger dictionryToJSONString:dic];
     return json;
+}
+
++ (void)uploadDatasAsync:(nonnull NSArray<NSData *> *)datas
+				   model:(nonnull QNModel *)model
+				complate:(nonnull ComplateCallback)complate
+				   faild:(nonnull ComplateCallback)faild {
+	[self uploadImageData:datas complate:complate faild:faild];
+}
+
++ (void)uploadTestAsync:(nonnull NSData *)data
+				  model:(nonnull QNModel *)model
+			   complate:(nonnull ComplateCallback)complate
+				  faild:(nonnull ComplateCallback)faild {
+	if (data.length > 0) {
+		[self testUploadData:data complate:complate faild:faild model:model];
+	}
 }
 
 @end

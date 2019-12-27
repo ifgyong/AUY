@@ -36,6 +36,7 @@ static UploadManger * _upload = nil;
 		}];
 		[[FYNotification share] pushWithUrl:fullURL];
 	}];
+	
 	[[UploadManger share] setFaild:^(NSString * _Nonnull error) {
 		[[FYNotification share] pushErrorWithMsg:error];
 	}];

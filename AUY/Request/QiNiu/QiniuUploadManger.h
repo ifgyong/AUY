@@ -10,12 +10,13 @@
 #import <Qiniu/QiniuSDK.h>
 
 #import "QNModel.h"
+#import "UploadProtocol.h"
 
-static NSString *extracted(NSData *  _Nonnull finData);
+static NSString * _Nullable   extracted(NSData *  _Nonnull finData);
 NS_ASSUME_NONNULL_BEGIN
 typedef void(^complateBlock)(NSString *);
 
-@interface QiniuUploadManger : NSObject
+@interface QiniuUploadManger : NSObject<UploadMangerProtocol>
 @property (nonatomic,strong)     NSOperationQueue *queue;
 //@property (nonatomic,copy) complateBlock block;
 //当前上传的文件 索引
@@ -23,9 +24,9 @@ typedef void(^complateBlock)(NSString *);
 
 
 
-+ (void)uploadImage:(NSArray<NSString*>  * _Nullable)url data:(NSArray<NSData*>  * _Nullable)data;
+//+ (void)uploadImage:(NSArray<NSString*>  * _Nullable)url data:(NSArray<NSData*>  * _Nullable)data;
 
-+ (void)uploadPasetedImage;
+//+ (void)uploadPasetedImage;
 
 + (instancetype)shareDefault;
 
@@ -34,16 +35,18 @@ typedef void(^complateBlock)(NSString *);
 /// @param data 测试数据
 /// @param comB 成功回调
 /// @param failB 失败回调
-+ (void)testUploadData:(NSData *)data
-			  complate:(complateBlock)comB
-				 faild:(complateBlock)failB
-				 model:(QNModel *)model;
+//+ (void)testUploadData:(NSData *)data
+//			  complate:(complateBlock)comB
+//				 faild:(complateBlock)failB
+//				 model:(QNModel *)model;
 
 + (BOOL)hasInfo;
 
 /// 获取名字 使用data
 /// @param data 数据data
 + (NSString *)getNameWithData:(NSData *)data;
+
++(void)uploadPasetedImage;
 @end
 
 NS_ASSUME_NONNULL_END

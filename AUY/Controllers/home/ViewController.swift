@@ -185,7 +185,8 @@ class ViewController: NSViewController,NSXPCListenerDelegate,NSWindowDelegate {
 			FYNotification.share().pushError(msg: "请选中文件哦😯！")
 			return;
 		}
-        QiniuUploadManger.uploadImage(nil,data: datas)
+		
+//        QiniuUploadManger.uploadImage(nil,data: datas)
 //		DispatchQueue.main.async {[weak self]in
 ////            self?.label.stringValue = obj.userInfo?["url"] as? String ?? "无 file"
 //		}

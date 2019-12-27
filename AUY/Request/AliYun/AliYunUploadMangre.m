@@ -84,7 +84,8 @@ static AliYunUploadMangre *manger;
 	} else{
 		[FYSourceManger.share addImageWithImg:[[NSImage alloc]initWithData:data]];
 		QNModel *model =[QNModel getSaveModel];
-		[AliYunUploadMangre uploadDatasAsync:@[data] model:model
+		[AliYunUploadMangre uploadDatasAsync:@[data]
+									   model:model
 									complate:^(NSString * _Nonnull url) {
 			[UploadManger share].complate(url);
 		} faild:^(NSString * _Nonnull error) {

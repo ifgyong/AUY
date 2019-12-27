@@ -13,12 +13,13 @@ class FYSettingWindow: NSWindow,NSToolbarDelegate {
 	
 	var tool = NSToolbar(identifier: .init("toolbar"))
 	var toolbarIdentifierArray:[NSToolbarItem.Identifier] = [NSToolbar.setting,NSToolbar.about]
-	
-	var vcs :[NSToolbarItem.Identifier:NSView] =
-								 [NSToolbar.setting : FYSettingView(),
-								  NSToolbar.about : FYAboutMeVC(nibName: "FYAboutMeVC", bundle: nil).view]
+	let aboutView = FYAboutView()
+	var vcs :[NSToolbarItem.Identifier:NSView] = [NSToolbarItem.Identifier:NSView]()//
 	func setup() -> Void {
-
+		vcs[NSToolbar.setting] = FYSettingView()
+		vcs[NSToolbar.about] = aboutView
+		
+		aboutView.config()
 		self.hidesOnDeactivate = false
 		tool.delegate = self
 		self.toolbar = self.tool

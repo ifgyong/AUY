@@ -13,7 +13,6 @@
 		A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503082323A91B49004A9260 /* NSAlertCategory.swift */; };
 		A55A63E623B3A7BB00D413A2 /* AliYunUploadMangre.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A63E423B3A7BB00D413A2 /* AliYunUploadMangre.m */; };
 		A55A63E923B3A7D000D413A2 /* AliYunClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A63E823B3A7D000D413A2 /* AliYunClient.m */; };
-		A55F0CAB23AF337F00B69D48 /* FYDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F0CAA23AF337F00B69D48 /* FYDragView.m */; };
 		A5826E4A239FE47000ED64ED /* QNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5826E49239FE47000ED64ED /* QNModel.m */; };
 		A5D86D4523AA6F0B009D94D8 /* NSImage+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */; };
 		CE3D15CAABD4BD87140A23A6 /* Pods_AUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323F65EDC78946814AFB1C11 /* Pods_AUY.framework */; };
@@ -27,9 +26,11 @@
 		EE59884523B4850800E04F18 /* UploadManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59884423B4850800E04F18 /* UploadManger.m */; };
 		EE59884823B48D0A00E04F18 /* UploadProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59884723B48D0A00E04F18 /* UploadProtocol.m */; };
 		EE59884A23B4983900E04F18 /* UploadImagePasted.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59884923B4983900E04F18 /* UploadImagePasted.swift */; };
+		EE59884C23B4B8D700E04F18 /* FYAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59884B23B4B8D700E04F18 /* FYAboutView.swift */; };
 		EE648F0623B2F44A0033BC94 /* AUYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0523B2F44A0033BC94 /* AUYTests.swift */; };
 		EE648F0E23B2F52B0033BC94 /* UploadImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */; };
-		EE72467C23B195760049DF10 /* FYDragVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE72467B23B195760049DF10 /* FYDragVC.swift */; };
+		EE9359C723B599E700CE8D44 /* UploadTencentManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9359C623B599E700CE8D44 /* UploadTencentManger.swift */; };
+		EE9359C923B5A24C00CE8D44 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9359C823B5A24C00CE8D44 /* RequestConfig.swift */; };
 		EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD31239F735100B965D6 /* UtilTool.m */; };
 		EE9DBD37239F735200B965D6 /* FYReceivedMsgObj.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD35239F735100B965D6 /* FYReceivedMsgObj.m */; };
 		EE9DBD4223A08AE900B965D6 /* Nofitication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD4123A08AE900B965D6 /* Nofitication.swift */; };
@@ -110,8 +111,6 @@
 		A55A63E423B3A7BB00D413A2 /* AliYunUploadMangre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliYunUploadMangre.m; sourceTree = "<group>"; };
 		A55A63E723B3A7D000D413A2 /* AliYunClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliYunClient.h; sourceTree = "<group>"; };
 		A55A63E823B3A7D000D413A2 /* AliYunClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliYunClient.m; sourceTree = "<group>"; };
-		A55F0CA923AF337F00B69D48 /* FYDragView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDragView.h; sourceTree = "<group>"; };
-		A55F0CAA23AF337F00B69D48 /* FYDragView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDragView.m; sourceTree = "<group>"; };
 		A5826E40239E96C900ED64ED /* AUY Extension-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AUY Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5826E48239FE47000ED64ED /* QNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNModel.h; sourceTree = "<group>"; };
 		A5826E49239FE47000ED64ED /* QNModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNModel.m; sourceTree = "<group>"; };
@@ -133,11 +132,16 @@
 		EE59884623B48D0A00E04F18 /* UploadProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadProtocol.h; sourceTree = "<group>"; };
 		EE59884723B48D0A00E04F18 /* UploadProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadProtocol.m; sourceTree = "<group>"; };
 		EE59884923B4983900E04F18 /* UploadImagePasted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImagePasted.swift; sourceTree = "<group>"; };
+		EE59884B23B4B8D700E04F18 /* FYAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYAboutView.swift; sourceTree = "<group>"; };
 		EE648F0323B2F44A0033BC94 /* AUYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE648F0523B2F44A0033BC94 /* AUYTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUYTests.swift; sourceTree = "<group>"; };
 		EE648F0723B2F44A0033BC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageTest.swift; sourceTree = "<group>"; };
-		EE72467B23B195760049DF10 /* FYDragVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYDragVC.swift; sourceTree = "<group>"; };
+		EE9359BF23B5993600CE8D44 /* libmtasdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmtasdk.a; sourceTree = "<group>"; };
+		EE9359C023B5993600CE8D44 /* QCloudCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QCloudCore.framework; sourceTree = "<group>"; };
+		EE9359C123B5993600CE8D44 /* QCloudCOSXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QCloudCOSXML.framework; sourceTree = "<group>"; };
+		EE9359C623B599E700CE8D44 /* UploadTencentManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTencentManger.swift; sourceTree = "<group>"; };
+		EE9359C823B5A24C00CE8D44 /* RequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
 		EE9DBD30239F735100B965D6 /* UtilTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilTool.h; sourceTree = "<group>"; };
 		EE9DBD31239F735100B965D6 /* UtilTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilTool.m; sourceTree = "<group>"; };
 		EE9DBD34239F735100B965D6 /* FYReceivedMsgObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYReceivedMsgObj.h; sourceTree = "<group>"; };
@@ -263,6 +267,24 @@
 			path = AUYTests;
 			sourceTree = "<group>";
 		};
+		EE9359BE23B5993600CE8D44 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				EE9359BF23B5993600CE8D44 /* libmtasdk.a */,
+				EE9359C023B5993600CE8D44 /* QCloudCore.framework */,
+				EE9359C123B5993600CE8D44 /* QCloudCOSXML.framework */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		EE9359C523B599D200CE8D44 /* tencentYun */ = {
+			isa = PBXGroup;
+			children = (
+				EE9359C623B599E700CE8D44 /* UploadTencentManger.swift */,
+			);
+			path = tencentYun;
+			sourceTree = "<group>";
+		};
 		EE9DBD2F239F735100B965D6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +314,7 @@
 		EE9DBD32239F735100B965D6 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				EE9359C523B599D200CE8D44 /* tencentYun */,
 				EE59883F23B4840700E04F18 /* QiNiu */,
 				A55A63E123B3A7BB00D413A2 /* AliYun */,
 				EE59884323B4850800E04F18 /* UploadManger.h */,
@@ -299,6 +322,7 @@
 				EE59884923B4983900E04F18 /* UploadImagePasted.swift */,
 				EE59884623B48D0A00E04F18 /* UploadProtocol.h */,
 				EE59884723B48D0A00E04F18 /* UploadProtocol.m */,
+				EE9359C823B5A24C00CE8D44 /* RequestConfig.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -325,9 +349,6 @@
 		EEC1563C23A9D1FB000D31A1 /* popVC */ = {
 			isa = PBXGroup;
 			children = (
-				A55F0CA923AF337F00B69D48 /* FYDragView.h */,
-				A55F0CAA23AF337F00B69D48 /* FYDragView.m */,
-				EE72467B23B195760049DF10 /* FYDragVC.swift */,
 				EEC1565823A9F325000D31A1 /* FYOpenDragFileView.swift */,
 				EEC1565423A9D23D000D31A1 /* FYPopViewController.swift */,
 				EEC1565523A9D23D000D31A1 /* FYPopViewController.xib */,
@@ -340,6 +361,7 @@
 			children = (
 				EEC1563E23A9D1FB000D31A1 /* FYAboutMeVC.swift */,
 				EEC1563F23A9D1FB000D31A1 /* FYAboutMeVC.xib */,
+				EE59884B23B4B8D700E04F18 /* FYAboutView.swift */,
 				EEC1564023A9D1FB000D31A1 /* FYSettingView.swift */,
 				EEC1564123A9D1FB000D31A1 /* FYSettingWindow.swift */,
 			);
@@ -380,6 +402,7 @@
 		EEF8A423239A458D00C2CC9A /* AUY */ = {
 			isa = PBXGroup;
 			children = (
+				EE9359BE23B5993600CE8D44 /* lib */,
 				EE3EB92E23A8C18500BCB958 /* source */,
 				A5826E47239FE44E00ED64ED /* Model */,
 				EE9DBD33239F735100B965D6 /* RECManger */,
@@ -629,6 +652,7 @@
 				EE9E677523A722D20015F910 /* DataSettingCenter.swift in Sources */,
 				EE9E676D23A36A220015F910 /* FYImageCell.swift in Sources */,
 				EE59883E23B483E800E04F18 /* NSObject+token.m in Sources */,
+				EE9359C723B599E700CE8D44 /* UploadTencentManger.swift in Sources */,
 				EEFDD28B23A77C73004D7E3B /* RectCategory.swift in Sources */,
 				A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */,
 				EEC1565623A9D23D000D31A1 /* FYPopViewController.swift in Sources */,
@@ -640,7 +664,9 @@
 				EE59883823B44A4500E04F18 /* UploadSetting.swift in Sources */,
 				EEC1564D23A9D1FB000D31A1 /* PreVC.swift in Sources */,
 				EEFDD28923A7689C004D7E3B /* URLCategory.swift in Sources */,
+				EE9359C923B5A24C00CE8D44 /* RequestConfig.swift in Sources */,
 				A5D86D4523AA6F0B009D94D8 /* NSImage+Format.m in Sources */,
+				EE59884C23B4B8D700E04F18 /* FYAboutView.swift in Sources */,
 				EE3EB92B23A8A27600BCB958 /* NSColorCategory.swift in Sources */,
 				EE9DBD4423A0D9E400B965D6 /* PasetedBoardManger.swift in Sources */,
 				EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */,
@@ -650,7 +676,6 @@
 				A50307FA23A475FE004A9260 /* PreGifModel.swift in Sources */,
 				EE3EB92D23A8B7B900BCB958 /* FYCopyTextField.swift in Sources */,
 				EEC1564923A9D1FB000D31A1 /* FYSettingView.swift in Sources */,
-				A55F0CAB23AF337F00B69D48 /* FYDragView.m in Sources */,
 				A50307F423A3CF70004A9260 /* FYCreateGif.swift in Sources */,
 				EEF8A427239A458E00C2CC9A /* AppDelegate.swift in Sources */,
 				A55A63E923B3A7D000D413A2 /* AliYunClient.m in Sources */,
@@ -661,7 +686,6 @@
 				EEFDD27523A74786004D7E3B /* FYToolBarItemIdentifiers.swift in Sources */,
 				EEC1565923A9F325000D31A1 /* FYOpenDragFileView.swift in Sources */,
 				EE59883623B440DE00E04F18 /* UserDefaultCategory.swift in Sources */,
-				EE72467C23B195760049DF10 /* FYDragVC.swift in Sources */,
 				EE59884223B4840700E04F18 /* QiniuUploadManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,16 +878,45 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = C3EKTD5HP5;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AUY/lib",
+				);
 				INFOPLIST_FILE = AUY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AUY/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"AliyunOSSiOS\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Qiniu\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-all_load",
+					"-Objec",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.auy.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -881,16 +934,45 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = C3EKTD5HP5;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AUY/lib",
+				);
 				INFOPLIST_FILE = AUY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AUY/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"AliyunOSSiOS\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Qiniu\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-all_load",
+					"-Objec",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.auy.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

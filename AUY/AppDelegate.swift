@@ -20,7 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	// icon 状态栏显示
 	var popover :NSPopover?
 	var dragViewC:NSWindowController?
-	var dragView:FYDragView?
 // MARK: 打开设置界面
 	@IBAction func openSettingWindow(_ sender: NSMenuItem) {
 		let wn = FYSettingWindow(contentRect: RectCatory.kWindowSettingRect,

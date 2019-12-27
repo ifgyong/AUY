@@ -19,13 +19,15 @@ class UploadImagePasted: NSObject {
 		} else{
 			FYSourceManger.share().addImage(img: NSImage(data: data!)!)
 			let ty = UserDefaults.standard.getUploadType()
-			switch ty {
-			case .QiNiu:
-				QiniuUploadManger.uploadPasetedImage()
-			case .AliYun:
-				AliYunUploadMangre.uploadDataFromPasted()
-			default: break
-				
+			if ty == .Unknow {
+				FYNotification.share().pushError(msg: "❌，请ISS作者哦！")
+
+			}else{
+				guard let next =  RequestConfig.config[ty]else {
+					FYNotification.share().pushError(msg: "❌，请ISS作者哦！")
+					return;
+				}
+				next.uploadDataFromPasted?()
 			}
 		}
 		

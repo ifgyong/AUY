@@ -108,32 +108,16 @@ class FYOpenDragFileView: NSImageView {
 			}
 			datas.append(data)
 		}
-//        let itemArr =  items as? String
-//        guard let itemNext = itemArr else {
-//            return
-//        }
-//        let url = URL(string: itemNext)!
-//        let data = try? Data(contentsOf : url)
-//        guard let next = data else {
-//            return
-//        }
-//        datas.append(next)
 		
 		let ty = UserDefaults.standard.getUploadType()
-		switch ty {
-		case .QiNiu:
-			QiniuUploadManger.uploadImage(nil, data: datas)
-		case .AliYun:
-			let model = QNModel .getSave()
-			AliYunUploadMangre.uploadDatasAsync(datas, model: model, complate: { (url) in
-				UploadManger.share().complate(url);
-			}) { (error) in
-				UploadManger.share().faild(error);
-			}
-		default:
-			break;
+		let model = QNModel .getSave()
+		UploadManger.share().imageIndex = 0;
+		RequestConfig.config[ty]?.uploadDatasAsync(datas, model: model, complate: { (url) in
+			UploadManger.share().complate(url);
+		}) { (error) in
+			UploadManger.share().faild(error);
 		}
-    }
+	}
 	
 	
 }

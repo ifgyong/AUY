@@ -25,8 +25,6 @@ typedef void(^ComplateBlock)(NSString *);
 
 - (void)setDefaultBlock;
 
-- (void)uploadImageFromPasted;
-
 @end
 
 NS_ASSUME_NONNULL_END

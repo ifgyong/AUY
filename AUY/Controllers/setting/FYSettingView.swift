@@ -137,42 +137,28 @@ class FYSettingView: NSView {
 			model.secretKey = secretKeyTextfile!.stringValue
 			model.buckName = buckNameTextfile!.stringValue
 			model.yuming = yumingTextfile!.stringValue
-            switch menuSelected {
-			case .QiNiu:
-                qiNiuUpload(da: da!, model: model)
-			case .AliYun:
-				aliUpload(da: da!, model: model)
-			case .Tencent:break
-			case .Unknow:
+			guard let data = da else{
+				return;
+			}
+			if menuSelected == .Unknow {
+				#if DEBUG
 				print("未知选项")
-            default: break
-                
-            }
-			
+				#endif
+			}else{
+				RequestConfig.config[menuSelected]?.uploadTestAsync(data,
+																	model: model,
+																	complate: { (url) in
+					print(url)
+					QNModel.save(model)
+					UserDefaults.standard.setUploadType(ty: self.menuSelected)
+					NSAlert.show(msg: "配置成功",window: self.window!)
+				}) { (error) in
+					NSAlert.show(msg: "配置失败,请确认秘钥是否正确",window: self.window!)
+					print("error:\(error)")
+				}
+			}
 		}
 	}
-    func aliUpload(da:Data,model:QNModel) -> Void{
-		
-		AliYunUploadMangre.uploadTestAsync(da, model: model, complate: { (url) in
-			print(url)
-			QNModel.save(model)
-			UserDefaults.standard.setUploadType(ty: .AliYun)
-            NSAlert.show(msg: "配置成功",window: self.window!)
-		}) { (error) in
-            NSAlert.show(msg: "配置失败,请确认秘钥是否正确",window: self.window!)
-			print("error:\(error)")
-		}
-    }
-    // MARK: 七牛上传
-    func qiNiuUpload(da:Data,model:QNModel) -> Void {
-        QiniuUploadManger.testUploadData(da, complate: { (_) in
-            QNModel.save(model)
-			UserDefaults.standard.setUploadType(ty: .QiNiu)
-            NSAlert.show(msg: "配置成功",window: self.window!)
-        }, faild: { (_) in
-            NSAlert.show(msg: "配置失败,请确认秘钥是否正确",window: self.window!)
-        }, model: model)
-    }
 	func checkInput()->Bool{
 		if selectedMenu!.indexOfSelectedItem == -1 {
             NSAlert.show(msg: "请选择图床平台",window: self.window!)

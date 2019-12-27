@@ -9,6 +9,6 @@
 #import "UploadProtocol.h"
 
 
-@implementation UploadProtocol
-
-@end
+//@implementation UploadProtocol
+//
+//@end
