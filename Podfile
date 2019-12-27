@@ -14,6 +14,7 @@ target 'AUY' do
 #	pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'AFNetworking', '~> 3.0.4'
 	pod 'AliyunOSSiOS'
+	pod 'QCloudNewCOSV4'
 
 	# pod 'SnapKit', '~> 4.0.1'
 end
