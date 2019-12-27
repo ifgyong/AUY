@@ -15,7 +15,9 @@
 #import "QiniuUploadManger.h"
 #import "AliYunUploadMangre.h"
 #import "UploadManger.h"
+//#import "ModelActionProtocol.h"
 
+#import "QNModel.h"
 
 
 

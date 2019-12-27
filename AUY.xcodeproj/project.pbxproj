@@ -13,7 +13,6 @@
 		A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503082323A91B49004A9260 /* NSAlertCategory.swift */; };
 		A55A63E623B3A7BB00D413A2 /* AliYunUploadMangre.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A63E423B3A7BB00D413A2 /* AliYunUploadMangre.m */; };
 		A55A63E923B3A7D000D413A2 /* AliYunClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A55A63E823B3A7D000D413A2 /* AliYunClient.m */; };
-		A5826E4A239FE47000ED64ED /* QNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5826E49239FE47000ED64ED /* QNModel.m */; };
 		A5D86D4523AA6F0B009D94D8 /* NSImage+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */; };
 		CE3D15CAABD4BD87140A23A6 /* Pods_AUY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323F65EDC78946814AFB1C11 /* Pods_AUY.framework */; };
 		EE3EB92B23A8A27600BCB958 /* NSColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB92A23A8A27600BCB958 /* NSColorCategory.swift */; };
@@ -29,6 +28,7 @@
 		EE59884C23B4B8D700E04F18 /* FYAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE59884B23B4B8D700E04F18 /* FYAboutView.swift */; };
 		EE648F0623B2F44A0033BC94 /* AUYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0523B2F44A0033BC94 /* AUYTests.swift */; };
 		EE648F0E23B2F52B0033BC94 /* UploadImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */; };
+		EE6F333F23B60DD7008E57A9 /* QNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6F333E23B60DD7008E57A9 /* QNModel.m */; };
 		EE9359C723B599E700CE8D44 /* UploadTencentManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9359C623B599E700CE8D44 /* UploadTencentManger.swift */; };
 		EE9359C923B5A24C00CE8D44 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9359C823B5A24C00CE8D44 /* RequestConfig.swift */; };
 		EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBD31239F735100B965D6 /* UtilTool.m */; };
@@ -38,8 +38,6 @@
 		EE9E676D23A36A220015F910 /* FYImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E676C23A36A220015F910 /* FYImageCell.swift */; };
 		EE9E677523A722D20015F910 /* DataSettingCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E677423A722D20015F910 /* DataSettingCenter.swift */; };
 		EEA4B66F23A1D01E00722734 /* Paseteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4B66E23A1D01E00722734 /* Paseteboard.swift */; };
-		EEC1564723A9D1FB000D31A1 /* FYAboutMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1563E23A9D1FB000D31A1 /* FYAboutMeVC.swift */; };
-		EEC1564823A9D1FB000D31A1 /* FYAboutMeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC1563F23A9D1FB000D31A1 /* FYAboutMeVC.xib */; };
 		EEC1564923A9D1FB000D31A1 /* FYSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1564023A9D1FB000D31A1 /* FYSettingView.swift */; };
 		EEC1564A23A9D1FB000D31A1 /* FYSettingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1564123A9D1FB000D31A1 /* FYSettingWindow.swift */; };
 		EEC1564B23A9D1FB000D31A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1564323A9D1FB000D31A1 /* ViewController.swift */; };
@@ -112,8 +110,6 @@
 		A55A63E723B3A7D000D413A2 /* AliYunClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliYunClient.h; sourceTree = "<group>"; };
 		A55A63E823B3A7D000D413A2 /* AliYunClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliYunClient.m; sourceTree = "<group>"; };
 		A5826E40239E96C900ED64ED /* AUY Extension-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AUY Extension-Bridging-Header.h"; sourceTree = "<group>"; };
-		A5826E48239FE47000ED64ED /* QNModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNModel.h; sourceTree = "<group>"; };
-		A5826E49239FE47000ED64ED /* QNModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNModel.m; sourceTree = "<group>"; };
 		A5D86D4323AA6F0B009D94D8 /* NSImage+Format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSImage+Format.h"; path = "AUY/Util/NSImage+Format.h"; sourceTree = SOURCE_ROOT; };
 		A5D86D4423AA6F0B009D94D8 /* NSImage+Format.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Format.m"; path = "AUY/Util/NSImage+Format.m"; sourceTree = SOURCE_ROOT; };
 		A9A5DBF0BF6512DCFE7C2900 /* Pods-AUYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AUYTests.debug.xcconfig"; path = "Target Support Files/Pods-AUYTests/Pods-AUYTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +133,8 @@
 		EE648F0523B2F44A0033BC94 /* AUYTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AUYTests.swift; sourceTree = "<group>"; };
 		EE648F0723B2F44A0033BC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE648F0D23B2F52B0033BC94 /* UploadImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageTest.swift; sourceTree = "<group>"; };
+		EE6F333D23B60DD7008E57A9 /* QNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNModel.h; sourceTree = "<group>"; };
+		EE6F333E23B60DD7008E57A9 /* QNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNModel.m; sourceTree = "<group>"; };
 		EE9359BF23B5993600CE8D44 /* libmtasdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmtasdk.a; sourceTree = "<group>"; };
 		EE9359C023B5993600CE8D44 /* QCloudCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QCloudCore.framework; sourceTree = "<group>"; };
 		EE9359C123B5993600CE8D44 /* QCloudCOSXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QCloudCOSXML.framework; sourceTree = "<group>"; };
@@ -151,8 +149,6 @@
 		EE9E676C23A36A220015F910 /* FYImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYImageCell.swift; sourceTree = "<group>"; };
 		EE9E677423A722D20015F910 /* DataSettingCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSettingCenter.swift; sourceTree = "<group>"; };
 		EEA4B66E23A1D01E00722734 /* Paseteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paseteboard.swift; sourceTree = "<group>"; };
-		EEC1563E23A9D1FB000D31A1 /* FYAboutMeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYAboutMeVC.swift; sourceTree = "<group>"; };
-		EEC1563F23A9D1FB000D31A1 /* FYAboutMeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FYAboutMeVC.xib; sourceTree = "<group>"; };
 		EEC1564023A9D1FB000D31A1 /* FYSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYSettingView.swift; sourceTree = "<group>"; };
 		EEC1564123A9D1FB000D31A1 /* FYSettingWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYSettingWindow.swift; sourceTree = "<group>"; };
 		EEC1564323A9D1FB000D31A1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -233,9 +229,9 @@
 		A5826E47239FE44E00ED64ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A5826E48239FE47000ED64ED /* QNModel.h */,
-				A5826E49239FE47000ED64ED /* QNModel.m */,
 				A50307F923A475FE004A9260 /* PreGifModel.swift */,
+				EE6F333D23B60DD7008E57A9 /* QNModel.h */,
+				EE6F333E23B60DD7008E57A9 /* QNModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,8 +355,6 @@
 		EEC1563D23A9D1FB000D31A1 /* setting */ = {
 			isa = PBXGroup;
 			children = (
-				EEC1563E23A9D1FB000D31A1 /* FYAboutMeVC.swift */,
-				EEC1563F23A9D1FB000D31A1 /* FYAboutMeVC.xib */,
 				EE59884B23B4B8D700E04F18 /* FYAboutView.swift */,
 				EEC1564023A9D1FB000D31A1 /* FYSettingView.swift */,
 				EEC1564123A9D1FB000D31A1 /* FYSettingWindow.swift */,
@@ -545,7 +539,6 @@
 				EEF8A42E239A458F00C2CC9A /* Assets.xcassets in Resources */,
 				EE3EB93423A8D92D00BCB958 /* test.png in Resources */,
 				EEF8A42A239A458E00C2CC9A /* Main.storyboard in Resources */,
-				EEC1564823A9D1FB000D31A1 /* FYAboutMeVC.xib in Resources */,
 				EEC1565723A9D23D000D31A1 /* FYPopViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,8 +650,6 @@
 				A503082423A91B49004A9260 /* NSAlertCategory.swift in Sources */,
 				EEC1565623A9D23D000D31A1 /* FYPopViewController.swift in Sources */,
 				EE9DBD4223A08AE900B965D6 /* Nofitication.swift in Sources */,
-				EEC1564723A9D1FB000D31A1 /* FYAboutMeVC.swift in Sources */,
-				A5826E4A239FE47000ED64ED /* QNModel.m in Sources */,
 				EE9DBD37239F735200B965D6 /* FYReceivedMsgObj.m in Sources */,
 				EEA4B66F23A1D01E00722734 /* Paseteboard.swift in Sources */,
 				EE59883823B44A4500E04F18 /* UploadSetting.swift in Sources */,
@@ -670,6 +661,7 @@
 				EE3EB92B23A8A27600BCB958 /* NSColorCategory.swift in Sources */,
 				EE9DBD4423A0D9E400B965D6 /* PasetedBoardManger.swift in Sources */,
 				EE9DBD36239F735200B965D6 /* UtilTool.m in Sources */,
+				EE6F333F23B60DD7008E57A9 /* QNModel.m in Sources */,
 				A50307FC23A4786D004A9260 /* NSImagePlayGIf.swift in Sources */,
 				EEC1D91F23A8818E0020874B /* FYWindowManger.swift in Sources */,
 				EE59884823B48D0A00E04F18 /* UploadProtocol.m in Sources */,
@@ -878,7 +870,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = C3EKTD5HP5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -895,7 +887,7 @@
 					"$(PROJECT_DIR)/AUY/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"resolv\"",
@@ -934,7 +926,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = C3EKTD5HP5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -951,7 +943,7 @@
 					"$(PROJECT_DIR)/AUY/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"resolv\"",

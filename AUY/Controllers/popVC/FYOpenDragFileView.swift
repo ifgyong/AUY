@@ -110,7 +110,7 @@ class FYOpenDragFileView: NSImageView {
 		}
 		
 		let ty = UserDefaults.standard.getUploadType()
-		let model = QNModel .getSave()
+		let model = QNModel.getSave()
 		UploadManger.share().imageIndex = 0;
 		RequestConfig.config[ty]?.uploadDatasAsync(datas, model: model, complate: { (url) in
 			UploadManger.share().complate(url);

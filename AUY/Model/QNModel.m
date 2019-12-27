@@ -7,14 +7,17 @@
 //
 
 #import "QNModel.h"
+#import <AUY-Swift.h>
 
 
 
+@interface QNModel () 
 
+@end
 
 @implementation QNModel
 
-+ (QNModel *)getSaveModel{
++ (instancetype)getSaveModel{
 	NSMutableDictionary *user = [[NSUserDefaults standardUserDefaults] objectForKey:kQiNiuKey];
 	if (user.count == 0) {
 		return nil;
@@ -25,6 +28,7 @@
 	model.secretKey = [user objectForKey:kQiNiusecretKey]; //@"lnBhZthAOUsHq5oFjnvEVdjCk46L2W2pELmuwU2d";
 	model.buckName = [user objectForKey:kQiNiubuckName]; //@"fgyongblog";
 	model.yuming = [user objectForKey:kOSS_ENDPOINT];
+	model.regName = [user objectForKey:kRegName];
 	return model;
 }
 + (void)saveModel:(QNModel *)model{
@@ -34,6 +38,9 @@
 	[dic setValue:model.secretKey forKey:kQiNiusecretKey];
 	[dic setValue:model.buckName forKey:kQiNiubuckName];
 	[dic setValue:model.yuming forKey:kOSS_ENDPOINT];
+	if (model.regName.length) {
+		[dic setValue:model.regName forKey:kRegName];
+	}
 	[user setObject:dic forKey:kQiNiuKey];
 	[user synchronize];
 }

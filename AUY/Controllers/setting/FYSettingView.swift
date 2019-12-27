@@ -26,12 +26,18 @@ class FYSettingView: NSView {
 	var yumingTextfile:T?
 	var accessKeyTextfile:T?
 	var secretKeyTextfile:T?
+	var regionNameTextfile:T?
+
+	var accessKey:NSText?
 	var selectedMenu:NSComboBox?
     
 	var menuSelected:UploadType = .Unknow
 
+	var tencentView:NSView = NSView()
+	
 	
 	func configUI() {
+		menuSelected = UserDefaults.standard.getUploadType()
 		btn.target = self
 		let width = self.frame.size.width - 200
 		btn.frame = NSRect(x: 100, y: 20, width: width, height: 21)
@@ -51,11 +57,11 @@ class FYSettingView: NSView {
 //		selectedMenu
 		selectedMenu!.addItem(withObjectValue: "七牛云")
 		selectedMenu!.addItem(withObjectValue: "阿里云")
-//		selectedMenu!.addItem(withObjectValue: "腾讯云")
+		selectedMenu!.addItem(withObjectValue: "腾讯云")
 		self.addSubview(selectedMenu!)
 		let defaultSelIndex = UserDefaults.standard.getUploadType()
 		selectedMenu?.selectItem(at: defaultSelIndex.raw())//默认七牛云
-//		selectedMenu.delegate = self
+		selectedMenu!.delegate = self
 		selectedMenu!.isEditable = false
 		let y = 225
 		let height = 30
@@ -64,11 +70,14 @@ class FYSettingView: NSView {
 		yumingTextfile = getTextField(placeholder: "栗子:http://blog.fgyong.cn", y: y)
 		self.addSubview(yumingTextfile!)
 		
+		var accessKeyStr = "accessKey"
+		if defaultSelIndex == .Tencent {
+			accessKeyStr = "secretId"
+		}
+		accessKey = getLabel(text: "\(accessKeyStr):", y: y - height*1)
+		self.addSubview(accessKey!)
 		
-		let accessKey = getLabel(text: "accessKey:", y: y - height*1)
-		self.addSubview(accessKey)
-		
-		accessKeyTextfile = getTextField(placeholder: "accessKey", y: y - height*1)
+		accessKeyTextfile = getTextField(placeholder: "\(accessKeyStr)", y: y - height*1)
 		self.addSubview(accessKeyTextfile!)
 		
 		let secretKey = getLabel(text: "secretKey:", y: y - height*2)
@@ -80,6 +89,21 @@ class FYSettingView: NSView {
 		self.addSubview(buckName)
 		buckNameTextfile = getTextField(placeholder: "栗子：fgyong", y: y - height*3)
 		self.addSubview(buckNameTextfile!)
+		
+		//regionName
+		tencentView.frame = NSRect(x: 0, y: y - height*5, width: 600, height: height * 2)
+		let regionName = getLabel(text: "regionName:", y: height)
+		tencentView.addSubview(regionName)
+		regionNameTextfile = getTextField(placeholder: "栗子：ap-shanghai", y: height)
+		tencentView.addSubview(regionNameTextfile!)
+		self.addSubview(tencentView)
+		
+		if menuSelected != .Tencent {
+			tencentView.isHidden = true
+		}else{
+			regionNameTextfile?.stringValue = QNModel.getSave().regName
+		}
+		
 		
 		loadDataFromCache()
 	}
@@ -131,12 +155,18 @@ class FYSettingView: NSView {
 			let text = Bundle.main.url(forResource: "test.png", withExtension: nil)!
 			let da = try? Data(contentsOf: text)
 			menuSelected = UploadType.raw(selectedMenu!.indexOfSelectedItem)
-
-			let model = QNModel()
+		
+			var model = QNModel()
+			
+			
+			if menuSelected == .Tencent {
+				model.regName = regionNameTextfile!.stringValue
+			}
 			model.accessKey = accessKeyTextfile!.stringValue
 			model.secretKey = secretKeyTextfile!.stringValue
 			model.buckName = buckNameTextfile!.stringValue
 			model.yuming = yumingTextfile!.stringValue
+			
 			guard let data = da else{
 				return;
 			}
@@ -145,11 +175,13 @@ class FYSettingView: NSView {
 				print("未知选项")
 				#endif
 			}else{
+				
 				RequestConfig.config[menuSelected]?.uploadTestAsync(data,
 																	model: model,
 																	complate: { (url) in
 					print(url)
 					QNModel.save(model)
+					
 					UserDefaults.standard.setUploadType(ty: self.menuSelected)
 					NSAlert.show(msg: "配置成功",window: self.window!)
 				}) { (error) in
@@ -167,7 +199,11 @@ class FYSettingView: NSView {
             NSAlert.show(msg: "请填写域名",window: self.window!)
 			return false
 		}else if (accessKeyTextfile?.stringValue ?? "").count == 0{
-            NSAlert.show(msg: "请填写accessKey",window: self.window!)
+			if UserDefaults.standard.getUploadType() == .Tencent {
+				NSAlert.show(msg: "请填写secretId",window: self.window!)
+			}else{
+				NSAlert.show(msg: "请填写accessKey",window: self.window!)
+			}
 			return false
 		}else if (secretKeyTextfile?.stringValue ?? "").count == 0{
             NSAlert.show(msg: "请填写secretKey",window: self.window!)
@@ -231,4 +267,19 @@ extension FYSettingView : NSTextFieldDelegate,NSTextViewDelegate{
 		}
         return true
     }
+}
+extension FYSettingView :NSComboBoxDelegate{
+	func comboBoxSelectionDidChange(_ notification: Notification) {
+		let box = notification.object as! NSComboBox
+		print(box.indexOfSelectedItem)
+		if (UploadType.raw(box.indexOfSelectedItem) != .Tencent) {
+			tencentView.isHidden = true
+			accessKey!.string = "accessKey"
+			accessKeyTextfile!.placeholderString = "accessKey"
+		}else{
+			accessKey!.string = "secredId"
+			accessKeyTextfile!.placeholderString = "secredId"
+			tencentView.isHidden = false
+		}
+	}
 }

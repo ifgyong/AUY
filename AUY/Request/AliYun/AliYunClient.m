@@ -9,9 +9,6 @@
 #import "AliYunClient.h"
 #import "QNModel.h"
 
-NSString *const endPoint = @"https://oss-cn-beijing.aliyuncs.com"; //@"http://aliyunimg.fgyong.cn";//
-NSString *const AccessKey = @"LTAI4FhJAjF6ZZmoGBUqdsT4";
-NSString *const SecretKey = @"HnjilwKtp8KEGF25oT6Uubj031DLKM";
 
 @implementation AliYunClient
 + (instancetype)sharedInstanceModel:(QNModel *)model {
@@ -21,9 +18,6 @@ NSString *const SecretKey = @"HnjilwKtp8KEGF25oT6Uubj031DLKM";
 + (AliYunClient *)_initClient:(QNModel *)model {
     // 打开调试log
 //    [OSSLog enableLog];
-    
-    // oss-cn-shenzhen    oss-cn-shenzhen.aliyuncs.com    oss-cn-shenzhen-internal.aliyuncs.com
-    
     id<OSSCredentialProvider> credential = [[OSSPlainTextAKSKPairCredentialProvider alloc] initWithPlainTextAccessKey:model.accessKey
 																											secretKey:model.secretKey];
     

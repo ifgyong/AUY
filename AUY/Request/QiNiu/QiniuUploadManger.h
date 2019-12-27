@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <Qiniu/QiniuSDK.h>
 
-#import "QNModel.h"
 #import "UploadProtocol.h"
 
 static NSString * _Nullable   extracted(NSData *  _Nonnull finData);

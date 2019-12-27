@@ -13,24 +13,36 @@ PODS:
   - AFNetworking/Security (3.0.4)
   - AFNetworking/Serialization (3.0.4)
   - AliyunOSSiOS (2.10.8)
+  - QCloudCore (5.7.0):
+    - QCloudCore/Default (= 5.7.0)
+  - QCloudCore/Default (5.7.0)
+  - QCloudCOSXML (5.7.0):
+    - QCloudCOSXML/Default (= 5.7.0)
+  - QCloudCOSXML/Default (5.7.0):
+    - QCloudCore (= 5.7.0)
   - Qiniu (7.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - AliyunOSSiOS
+  - QCloudCOSXML
   - Qiniu (~> 7.3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - AliyunOSSiOS
+    - QCloudCore
+    - QCloudCOSXML
     - Qiniu
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  QCloudCore: 2852b0b9c184e73b142f0503c1d5f8a317a3e6f4
+  QCloudCOSXML: 73674938d0ab68fd17cbad0d186099403842611d
   Qiniu: a2fb1f87b40f52bc1f386d93c6d48aab09472eae
 
-PODFILE CHECKSUM: 92b3d4bcb33f69f27af869c4f8738544ced21e06
+PODFILE CHECKSUM: 8461b20d116d0a0b3c86f9937097204305172bc0
 
 COCOAPODS: 1.7.5

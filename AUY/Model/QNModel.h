@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ModelActionProtocol.h"
+
 NS_ASSUME_NONNULL_BEGIN
 static NSString * kQiNiuKey = @"kQiNiuKey";
 static NSString * kQiNiuYuMingKey = @"kQiNiuYuMingKey";
@@ -21,6 +23,9 @@ static NSString * kQiNiubuckName = @"kQiNiubuckName";
 static NSString * kOSS_ENDPOINT = @"kOSS_ENDPOINT";
 
 
+static NSString * kRegName = @"kRegName";
+
+
 @interface QNModel : NSObject
 
 
@@ -28,9 +33,10 @@ static NSString * kOSS_ENDPOINT = @"kOSS_ENDPOINT";
 @property (nonatomic,strong) NSString *secretKey;
 @property (nonatomic,strong) NSString *buckName;
 @property (nonatomic,strong) NSString *yuming;
+@property (nonatomic,strong) NSString *regName;
 
 
-+ (QNModel *)getSaveModel;
++ (instancetype)getSaveModel;
 
 + (void)saveModel:(QNModel *)model;
 
