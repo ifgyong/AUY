@@ -4,9 +4,10 @@
 一款帮助开发者更好更快的写博客的APP
 支持一键上传图床、拖单个多文件上传图床、一键复制上一个上传图片的url,更多的详情请见
 ## 目前支持的图床
-- [七牛](https://portal.qiniu.com/create)
+- [七牛云](https://portal.qiniu.com/create)
 - [阿里OSS](https://www.aliyun.com/product/oss)
-- [腾讯](https://cloud.tencent.com/product/cos)
+- [腾讯对象存储](https://cloud.tencent.com/product/cos)
+- [又拍云](https://www.upyun.com/)
 
 ## 多文件上传
 ![](http://img.fgyong.cn/157741747878.GIF)
