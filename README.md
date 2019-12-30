@@ -4,10 +4,6 @@
 一款帮助开发者更好更快的写博客的APP
 支持一键上传图床、拖单个多文件上传图床、一键复制上一个上传图片的url,更多的详情请见
 
-
-<video id="video" controls="" preload="none" poster="2.png">
-      <source id="mp4" src="1.mov">
-      </video>
   
 ### 最新版下载[Releases](https://github.com/ifgyong/AUY/releases)
 ## [使用帮助](https://github.com/ifgyong/AUY/wiki)
