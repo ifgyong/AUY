@@ -9,7 +9,7 @@ AUY.xcworkspace/
 ._*.swift
 ._*.m
 ._*.h
-
+._*.*
 
 **/_*.swift
 build/
