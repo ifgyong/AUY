@@ -18,6 +18,7 @@
 //#import "ModelActionProtocol.h"
 
 #import "QNModel.h"
+#import "UPYunManger.h"
 
 
 

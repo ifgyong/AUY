@@ -10,6 +10,7 @@ import Cocoa
 
 import Carbon
 import CoreServices
+import Foundation
 
 class FYSettingView: NSView {
 	
@@ -29,6 +30,7 @@ class FYSettingView: NSView {
 	var regionNameTextfile:T?
 
 	var accessKey:NSText?
+	var secretKey:NSText?
 	var selectedMenu:NSComboBox?
     
 	var menuSelected:UploadType = .Unknow
@@ -58,6 +60,8 @@ class FYSettingView: NSView {
 		selectedMenu!.addItem(withObjectValue: "七牛云")
 		selectedMenu!.addItem(withObjectValue: "阿里云")
 		selectedMenu!.addItem(withObjectValue: "腾讯云")
+		selectedMenu!.addItem(withObjectValue: "又拍云")
+
 		self.addSubview(selectedMenu!)
 		let defaultSelIndex = UserDefaults.standard.getUploadType()
 		selectedMenu?.selectItem(at: defaultSelIndex.raw())//默认七牛云
@@ -80,8 +84,8 @@ class FYSettingView: NSView {
 		accessKeyTextfile = getTextField(placeholder: "\(accessKeyStr)", y: y - height*1)
 		self.addSubview(accessKeyTextfile!)
 		
-		let secretKey = getLabel(text: "secretKey:", y: y - height*2)
-		self.addSubview(secretKey)
+		secretKey = getLabel(text: "secretKey:", y: y - height*2)
+		self.addSubview(secretKey!)
 		secretKeyTextfile = getTextField(placeholder: "secretKey", y: y - height*2)
 		self.addSubview(secretKeyTextfile!)
 		
@@ -104,9 +108,31 @@ class FYSettingView: NSView {
 			regionNameTextfile?.stringValue = QNModel.getSave().regName
 		}
 		
+		setConfig(ty: menuSelected)//设置提示文字
 		
 		loadDataFromCache()
 	}
+	// MARK: 根据不同图床配置不同提示文字
+	func setConfig(ty:UploadType) -> Void{
+		tencentView.isHidden = true
+		switch ty {
+		case .UPYun:
+			accessKey?.string = "操作员"
+			accessKeyTextfile?.placeholderString = "操作员"
+			secretKey?.string = "密码"
+			secretKeyTextfile?.placeholderString = "32位密码"
+		case .Tencent:
+			tencentView.isHidden = false
+			accessKey?.string = "secretId"
+			accessKeyTextfile?.placeholderString = "secretId"
+		default:
+			secretKey?.string = "secretKey"
+			secretKeyTextfile?.placeholderString = "secretKey"
+			accessKey?.string = "accessKey"
+			accessKeyTextfile?.placeholderString = "accessKey"
+		}
+	}
+	
 	func loadDataFromCache() -> Void {
 //		selectedMenu?.delegate = self
 		let ty = UserDefaults.standard.getUploadType().raw()
@@ -156,7 +182,7 @@ class FYSettingView: NSView {
 			let da = try? Data(contentsOf: text)
 			menuSelected = UploadType.raw(selectedMenu!.indexOfSelectedItem)
 		
-			var model = QNModel()
+			let model = QNModel()
 			
 			
 			if menuSelected == .Tencent {
@@ -272,14 +298,6 @@ extension FYSettingView :NSComboBoxDelegate{
 	func comboBoxSelectionDidChange(_ notification: Notification) {
 		let box = notification.object as! NSComboBox
 		print(box.indexOfSelectedItem)
-		if (UploadType.raw(box.indexOfSelectedItem) != .Tencent) {
-			tencentView.isHidden = true
-			accessKey!.string = "accessKey"
-			accessKeyTextfile!.placeholderString = "accessKey"
-		}else{
-			accessKey!.string = "secredId"
-			accessKeyTextfile!.placeholderString = "secredId"
-			tencentView.isHidden = false
-		}
+		setConfig(ty: UploadType.raw(box.indexOfSelectedItem))
 	}
 }

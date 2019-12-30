@@ -13,6 +13,7 @@ struct RequestConfig {
 
 	static var config : [UploadType : UploadMangerProtocol.Type] = [UploadType.QiNiu:QiniuUploadManger.self,
 															 UploadType.AliYun:AliYunUploadMangre.self,
-															 UploadType.Tencent:UploadTencentManger.self]
+															 UploadType.Tencent:UploadTencentManger.self,
+															 UploadType.UPYun:UPYunManger.self]
 	
 }
