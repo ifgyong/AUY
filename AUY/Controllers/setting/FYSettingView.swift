@@ -242,14 +242,6 @@ class FYSettingView: NSView {
 	}
 }
 extension FYSettingView : NSTextFieldDelegate,NSTextViewDelegate{
-	
-	override func keyUp(with event: NSEvent) {
-//		print(event)
-	}
-	override func keyDown(with event: NSEvent) {
-//		print(event)
-	}
-	//
     func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         print(commandSelector.description)
         let sel = Selector(("noop:"))

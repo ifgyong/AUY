@@ -51,11 +51,19 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AUY" customModuleProvider="target">
                     <connections>
+                        <outlet property="openOrCloseItem" destination="qh4-TY-TJT" id="x3g-rc-y8k"/>
                         <outlet property="statusMenu" destination="zfo-8W-0YQ" id="9x3-OZ-KIK"/>
                     </connections>
                 </customObject>
                 <menu title="title" id="zfo-8W-0YQ">
                     <items>
+                        <menuItem title="开启" state="on" id="qh4-TY-TJT">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="openOrClose:" target="Voe-Tx-rLC" id="XQ1-cc-Er7"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="7B0-cV-oKc"/>
                         <menuItem title="上传" id="ucz-8c-FkN" userLabel="上传">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>

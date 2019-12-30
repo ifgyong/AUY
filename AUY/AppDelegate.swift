@@ -20,7 +20,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	// icon 状态栏显示
 	var popover :NSPopover?
 	var dragViewC:NSWindowController?
-// MARK: 打开设置界面
+    //是否开启弹窗功能
+    var visiable:Bool = true
+    @IBOutlet weak var openOrCloseItem: NSMenuItem!
+    @IBAction func openOrClose(_ sender: NSMenuItem) {
+//        sender.state = !sender.state
+        print(sender.state.rawValue)
+        if sender.state == .off {
+            sender.state = .on
+            statusItem.button?.image = NSImage(named: "statusicon")
+            visiable = true
+        }else{
+            sender.state = .off
+            visiable = false
+            statusItem.button?.image = NSImage(named: "statusiconclose")
+        }
+    }
+    // MARK: 打开设置界面
 	@IBAction func openSettingWindow(_ sender: NSMenuItem) {
 		let wn = FYSettingWindow(contentRect: RectCatory.kWindowSettingRect,
 								 styleMask: [.titled,.closable],
@@ -87,7 +103,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //		self.dragViewC!.showWindow(nil)
 //
 //		return;
-		
+        if visiable == false {
+            return
+        }
 		guard let vc = viewFromPop else {
 			let views = NSApp.windows
 			for i in views {
