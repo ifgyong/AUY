@@ -149,7 +149,7 @@ class FYSettingView: NSView {
 	}
 	func getLabel(text:String,y:Int) -> NSText {
 		let textLabel = NSText(frame: CGRect(x: 20, y: y, width: 87, height: 16))
-		textLabel.backgroundColor = NSColor.defaultBackGroundColor
+		textLabel.backgroundColor = NSColor.clear
 		textLabel.alignment = .right
 		textLabel.string = text
 		textLabel.isEditable = false

@@ -10,5 +10,5 @@ import Foundation
 
 
 extension NSColor{
-	static let defaultBackGroundColor = NSColor.init(calibratedRed: 231/255.0, green: 231/255.0, blue: 231/255.0, alpha: 1)
+	static let defaultBackGroundColor = (NSColor.init(calibratedRed: 231/255.0, green: 231/255.0, blue: 231/255.0, alpha: 1))
 }
